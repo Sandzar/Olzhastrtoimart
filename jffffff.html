@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Строительный магазин в Косшы — Олжа</title>
+    <meta name="description" content="Строительный магазин Олжа в городе Косшы. Сантехника, инструменты, стройматериалы, доставка по городу.">
+    <link rel="icon" type="image/png" href="Логотип Олжа.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="javascript" href="script.js">
+    <script>
+        function press(el) {
+            el.classList.add("active");
+            setTimeout(() => el.classList.remove("active"), 150);
+        }
+    </script>
+    <style>
+    @media (max-width: 480px){
+        .conteinermoreee {
+            width: 100%;
+            overflow-x: hidden;
+        }
+    }
+    </style>
+    <!-- Responsive for main page -->
+    <style>
+      @media (max-width: 768px) {
+        .vmeste67 { flex-direction: column; }
+        .Prevj { height: auto; background-position: center top; }
+        .fofan, .assortement { font-size: 20px; display: block; margin: 10px auto; }
+        .slides { height: 300px; }
+        .carousel-containerr { width: 100%; }
+      }
+      @media (max-width: 480px) {
+        .vmeste67 { flex-direction: column; }
+        .Prevj { height: auto; background-position: center top; }
+        .fofan, .assortement { font-size: 18px; }
+        .slides { height: 200px; }
+        .carousel-containerr { width: 100%; }
+      }
+    </style>
+</head>
+<div id="carouselTrack" style="display:none"></div>
+
+<body>
+    <div class="conteinermoreee">
+    <div class="main-content" id="main-content">
+        <div class="navbar">
+            <img src="ЛОГО.png" class="logotip">
+            <a href="#asso" class="assor">Наш ассортимент</a>
+            <h2>Любой запрос, не вопрос</h2>
+            <a href="#kont" class="konta">Контакты & инфо</a>
+        </div>
+
+        
+
+        <div class="Prevj">
+            <h1 class="moon">Магазин строительных товаров</h1>
+            <img src="Логотип Олжа.png" class="logotip1">
+            <h3 class="GLAV">«Олжа» - это удобный строительный магазин<br> в вашем городе Косшы.</h3>
+            <h3 class="GLUV">Заниматься стройкой или ремонтом стало<br> легче, ведь тут вы найдете все самое необходимое.</h3>
+            <h3 class="Dostavka">ДОСТАВКА от 50.000тг - БЕСПЛАТНО</h3>
+        </div>
+        <div class="vmeste">
+        <h1 class="fofan" id="asso">Наш ассортимент</h1> <a href="assortement.html" class="assortement">Все ассортименты</a>
+        </div>
+        <div class="vmeste67">
+            <div class="nevmeste">
+        <div class="Catolog1">
+            <h3>Сантехника</h3>
+        </div>
+        <div class="Catolog2">
+            <h3>Краски и лаки</h3>
+        </div>
+            </div>
+            <div class="nevmeste">
+        <div class="Catolog3">
+            <h3>Электротовары</h3>
+        </div>
+        <div class="Catolog4">
+            <h3>Клеи, герметики и монтажня пена</h3>
+        </div>
+            </div>
+            <div class="nevmeste">
+        <div class="Catolog5">
+            <h3>Сухие смеси</h3>
+        </div>
+        <div class="Catolog6">
+            <h3>Инструменты</h3>
+        </div>
+            </div>
+            <div class="nevmeste">
+        <div class="Catolog7">
+            <h3>Еврокубы и разные емкости</h3>
+        </div>
+        <div class="Catolog8">
+            <h3>Все для отопительной системы и водоснабжения</h3>
+        </div>
+            </div>
+            <div class="nevmeste">
+        <div class="Catolog9">
+            <h3>Прокат инструментов</h3>
+        </div>
+        <div class="Catolog10">
+            <h3>Крепежные материалы</h3>
+        </div>
+            </div>
+            <div class="nevmeste">
+        <div class="Catolog11">
+            <h3>Гипсокартон и комплектующие</h3>
+        </div>
+        <div class="Catolog12">
+            <h3>Электро-
+                водонагреватель</h3>
+        </div>
+            </div>
+            </div>
+        </div>
+    <div class="okno1">
+        <h1>Акции</h1>
+        <div class="slider">
+            <div class="slides">
+                <img src="акция.jpeg" alt="Акция 1">
+                <img src="акция.jpeg" alt="Акция 2">
+                <img src="акция.jpeg" alt="Акция 3">
+                <img src="акция.jpeg" alt="Акция 4">
+            </div>
+            <button class="btn prev">⟨</button>
+            <button class="btn next">⟩</button>
+        </div>
+    </div>
+
+
+    <div class="rev-section">
+        <h1>Отзывы</h1>
+        
+        <!-- Кнопки навигации -->
+        <div class="navigacia">
+            <button onclick="scrollReviews('prev')" 
+                    class="btnprev">
+                &larr; Назад
+            </button>
+            <button onclick="scrollReviews('next')" 
+                    class="btnnext">
+                Вперед &rarr;
+            </button>
+        </div>
+
+        <!-- Контейнер отзывов -->
+        <div class="rev-scroll" id="revGallery" data-step="344">
+            
+            <div class="rev-card">
+                <p class="rev-stars">⭐⭐⭐⭐⭐</p>
+                <p class="rev-text">Отличный магазин, нашли все для ремонта, хороший сервис. Рекомендую к посещению, хорошее расположение!</p>
+                <p class="rev-text">— Хан Али</p>
+                <p class="rev-author">2ГИС</p>
+            </div>
+            
+            <div class="rev-card">
+                <p class="rev-stars">⭐⭐⭐⭐⭐</p>
+                <p class="rev-text">Отличный магазин, ребята найдут подход к каждому клиенту. Цены адекватные, успехов и процветания магазину!</p>
+                <p class="rev-text">— Дамир Муканмедияров</p>
+                <p class="rev-author">2ГИС</p>
+            </div>
+            
+            <div class="rev-card">
+                <p class="rev-stars">⭐⭐⭐⭐⭐</p>
+                <p class="rev-text">Магазин супер, цены радуют, персонал отзывчивый, очень понравилось, вообще супер! 🔥🔥🔥</p>
+                <p class="rev-text">— Аруна Кенжебай</p>
+                <p class="rev-author">2ГИС</p>
+            </div>
+
+            <div class="rev-card">
+                <p class="rev-stars">⭐⭐⭐⭐⭐</p>
+                <p class="rev-text">Быстрая доставка и вежливый курьер. Всё соответствует описанию на сайте. Спасибо за отличный сервис!</p>
+                <p class="rev-text">— Екатерина В.</p>
+                <p class="rev-author">Сайт</p>
+            </div>
+
+            <div class="rev-card">
+                <p class="rev-stars">⭐⭐⭐⭐⭐</p>
+                <p class="rev-text">Большой выбор! Гибкие цены. Приветливый персонал! Всем советую к посещению и покупкам.</p>
+                <p class="rev-text">— Ramil S.</p>
+                <p class="rev-author">Яндекс карта</p>
+            </div>
+
+            <div class="rev-card">
+                <p class="rev-stars">⭐⭐⭐⭐⭐</p>
+                <p class="rev-text">Магазин Олжа Косшыдагы оте жаксы магазин , и доставка и установка бар👍 24/7 жумыс жасайды!</p>
+                <p class="rev-text">— Zarina Musabekova</p>
+                <p class="rev-author">Яндекс карта</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    
+    <div class="magaz" id="kont">
+        <h1>Контакты & инфо</h1>
+        <div class="vmeste">
+        <div class="rabota">
+            <h2>График работы<br>9:00-21:00<br>Без обеда и выходных </h2>
+        </div>
+        
+        <div class="adress">
+            <h2>Наш адрес:</h2>
+            <h2>Ул. Кобыланды батыр 81, Косшы</h2>
+            <div class="ssilka">
+                <button class="gis"
+                onclick="press(this);window.location.href=`https://2gis.kz/astana/geo/70000001081896930`"></button>
+                <button class="googlemap"
+                onclick="press(this);window.location.href=`https://maps.app.goo.gl/XN8NC9v4SFRXS81h9?g_st=awb`"></button>
+                <button class="yandex"
+                onclick="press(this);window.location.href=`https://yandex.kz/maps/-/CLvNZNkk`"></button>
+            </div>
+            
+        </div>
+        <div class="nomer">
+            <h2>Наш номер телефон:</h2>
+            <h2>+7 775 447 9913</h2>
+            <button class="WhatsApp" onclick="press(this);window.location.href=`https://wa.me/77754479913`"></button>
+            <button class="instagram" onclick="press(this);window.location.href=`https://www.instagram.com/olzha.stroymart`"></button>
+        </div>
+        </div>
+    </div>
+    <div class="carousel-containerr">
+                <button class="prev-btn" onclick="plusSlides(-1)">&#10094;</button>
+                
+                <div class="slides-wrapper">
+                    <div class="mySlides fade"><img src="магазин.jpg"></div>
+                    <div class="mySlides fade"><img src="магазин1.jpg"></div>
+                    <div class="mySlides fade"><img src="магазин2.jpg"></div>
+                    <div class="mySlides fade"><img src="магазин3.jpg"></div>
+                    <div class="mySlides fade"><img src="магазин4.jpg"></div>
+                    <div class="mySlides fade"><img src="магазин5.jpg"></div>
+                    <div class="mySlides fade"><img src="магазин6.jpg"></div>
+                    <div class="mySlides fade"><img src="магазин7.jpg"></div>
+                    <div class="mySlides fade"><img src="магазин8.jpg"></div>
+                    <div class="mySlides fade"><img src="магазин9.jpg"></div>
+                    <div class="mySlides fade"><img src="магазин10.jpg"></div>
+                </div>
+                
+                <button class="next-btn" onclick="plusSlides(1)">&#10095;</button>
+                
+                <div style="text-align:center; padding-top: 10px;">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                    <span class="dot" onclick="currentSlide(8)"></span>
+                    <span class="dot" onclick="currentSlide(9)"></span>
+                    <span class="dot" onclick="currentSlide(10)"></span>
+                    <span class="dot" onclick="currentSlide(11)"></span>
+                </div>
+            </div>
+    <div class="footer">
+        <p class="vipP">Нашел ошибку(-и) сайта?</p>
+        <p>Напиши нам:</p>
+        <button onclick="window.location.href='https://wa.me/77762857679?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%8F%20%D0%BF%D0%BE%20%D0%BE%D0%B1%D1%8A%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8E'" class="btnSS">WhatsApp</button>
+
+        <button onclick="window.location.href='https://t.me/vebrazrab2011'" class="btnSS">Telegram</button>
+        <p>Или через почту (Рекомендуется):</p>
+        <button onclick="window.location.href='forum.html'" class="btnSS">Email</button>
+    </div>
+    <p class="xxxx">© 2025 Строительный магазин "Олжа". Все права защищены.</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("active");
+            document.getElementById("overlay").classList.toggle("active");
+        }
+
+        function closeMenu() {
+            document.getElementById("menu").classList.remove("active");
+            document.getElementById("overlay").classList.remove("active");
+        }
+
+        const slides = document.querySelector('.slides');
+        const images = document.querySelectorAll('.slides img');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        let index = 0;
+        const total = images.length;
+
+        function showSlide(i) {
+            if (i < 0) index = total - 1;
+            else if (i >= total) index = 0;
+            else index = i;
+            slides.style.transform = `translateX(${-index * 100}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(index + 1);
+        }
+
+        function prevSlide() {
+            showSlide(index - 1);
+        }
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        setInterval(nextSlide, 5000);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const blocks = document.querySelectorAll('.rabota, .nomer, .adress');
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+            const observer = new IntersectionObserver(observerCallback, {
+                threshold: 0.1
+            });
+            blocks.forEach(block => {
+                observer.observe(block);
+            });
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const tags = [
+                'Строительные материалы', 'Электротовары', 'Еврокубы', 'Электроинструменты', 'Сантехника', 'Прокат инструментов', 'Крепежные материалы', 'Плинтусы', 'Инструменты', 'Лакокрасочные материалы',
+            ];
+
+            const carouselTrack = document.getElementById('carouselTrack');
+
+            // Функция для создания элемента тега
+            const createTagElement = (tagText) => {
+                const a = document.createElement('a');
+                a.href = ''; // Можете добавить реальную ссылку
+                a.classList.add('tag-item');
+                a.textContent = tagText;
+                return a;
+            };
+
+            // Добавляем теги в дорожку
+            tags.forEach(tag => {
+                carouselTrack.appendChild(createTagElement(tag));
+            });
+
+            // 💡 Дублируем теги, чтобы создать эффект бесконечной прокрутки
+            // Без этого анимация будет "прыгать" при повторе
+            tags.forEach(tag => {
+                carouselTrack.appendChild(createTagElement(tag));
+            });
+        });
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { // ← закрепляется после прокрутки 50px
+                navbar.classList.add('fixed');
+            } else {
+                navbar.classList.remove('fixed');
+            }
+        });
+        let slideIndex = 0; // Начинаем с первого слайда
+        let timeoutHandle = null; // Переменная для хранения интервала автопрокрутки
+        const slidess = document.getElementsByClassName("mySlides");
+        const dots = document.getElementsByClassName("dot");
+        const AUTO_SCROLL_TIME = 5000; // 5000 мс = 5 секунд
+
+        // --- Главная функция отображения слайдов ---
+        function showSlides() {
+            // Скрываем все слайды и убираем активный класс у точек
+            for (let i = 0; i < slidess.length; i++) {
+                slidess[i].style.display = "none";
+                dots[i].className = dots[i].className.replace(" active1", "");
+            }
+
+            // Переход к следующему слайду
+            slideIndex++;
+            if (slideIndex > slidess.length) {
+                slideIndex = 1; // Возвращаемся к первому слайду, когда доходим до конца
+            }
+
+            // Отображаем текущий слайд и делаем точку активной
+            slidess[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active1";
+
+            // Перезапускаем автопрокрутку
+            startAutoScroll();
+        }
+
+        // --- Управление автопрокруткой ---
+        function startAutoScroll() {
+            clearTimeout(timeoutHandle); // Сначала останавливаем, если уже запущен
+            // Запускаем автоматическое перелистывание каждые 5 секунд
+            timeoutHandle = setTimeout(showSlides, AUTO_SCROLL_TIME);
+        }
+
+        // --- Функция для ручного перелистывания (кнопки) ---
+        function plusSlides(n) {
+            // Вычисляем новый индекс и сбрасываем счетчик автопрокрутки
+            currentSlide(slideIndex + n);
+        }
+
+        // --- Функция для перехода к конкретному слайду (точки) ---
+        function currentSlide(n) {
+            clearTimeout(timeoutHandle); // Останавливаем автопрокрутку при ручном управлении
+
+            slideIndex = n; // Устанавливаем новый индекс
+
+            // Принудительно показываем слайд (без инкремента slideIndex, как в showSlides)
+            for (let i = 0; i < slidess.length; i++) {
+                slidess[i].style.display = "none";
+                dots[i].className = dots[i].className.replace(" active1", "");
+            }
+
+            if (slideIndex > slidess.length) {
+                slideIndex = 1;
+            }
+            if (slideIndex < 1) {
+                slideIndex = slidess.length;
+            }
+
+            slidess[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active1";
+
+            // Сразу же запускаем автопрокрутку с текущего слайда
+            startAutoScroll();
+        }
+
+        // Запускаем слайдер, когда страница загрузится
+        document.addEventListener("DOMContentLoaded", function () {
+            // Начинаем с первого слайда и запускаем автопрокрутку
+            currentSlide(1);
+        });
+       document.addEventListener('DOMContentLoaded', () => {
+            const gallery = document.getElementById('revGallery');
+            let isDown = false; 
+            let startX;         
+            let scrollLeft;     
+
+            gallery.addEventListener('mousedown', (e) => {
+                isDown = true;
+                gallery.classList.add('active');
+                startX = e.pageX - gallery.offsetLeft;
+                scrollLeft = gallery.scrollLeft;
+            });
+
+            gallery.addEventListener('mouseleave', () => {
+                isDown = false;
+                gallery.classList.remove('active');
+            });
+
+            gallery.addEventListener('mouseup', () => {
+                isDown = false;
+                gallery.classList.remove('active');
+            });
+
+            gallery.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - gallery.offsetLeft;
+                const walk = x - startX;
+                gallery.scrollLeft = scrollLeft - walk;
+            });
+        });
+
+        // Прокрутка кнопками
+        function scrollReviews(direction) {
+            const gallery = document.getElementById('revGallery');
+            if (!gallery) return;
+            const step = parseInt(gallery.dataset.step);
+            const scrollAmount = direction === 'next' ? step : -step;
+            gallery.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+
+</html>

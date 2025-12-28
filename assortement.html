@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Все ассортименты</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;}
+        .Catolog1{
+            background-color: #dddddd;
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+            background-image: url("Кран\ Сантехник.png");
+            background-size: 80%;
+            background-position: 70px 35px;
+            background-repeat: no-repeat;
+            margin-top: 15px;
+            margin-left: 30px;
+        }
+        .Catolog1 h3{
+            font-weight: bold;
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+        .Catolog2{
+            background-color: #dddddd;
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+            background-image: url("Краски\ и\ лаки.png");
+            background-size: 80%;
+            background-position: 80px 65px;
+            background-repeat: no-repeat;
+            margin-top: 15px;
+            margin-left: 30px;
+        }
+        .Catolog2 h3{
+            font-weight: bold;
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+
+        .Catolog3{
+            background-color: #dddddd;
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+            background-image: url("Электротовары.png");
+            background-size: 80%;
+            background-position: 70px 10px;
+            background-repeat: no-repeat;
+            margin-top: 55px;
+            margin-left: 15px;
+        }
+        .Catolog3 h3{
+            font-weight: bold;
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+        .Catolog4{
+            background-color: #dddddd;
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+            background-image: url("Монтажная\ пена.png");
+            background-size: 120%;
+            background-position: 30px 65px;
+            background-repeat: no-repeat;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+        .Catolog4 h3{
+            font-weight: bold;
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+
+
+        .Catolog5{
+            background-color: #dddddd;
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+            background-image: url("Сухие\ смеси.png");
+            background-size: 80%;
+            background-position: 80px 55px;
+            background-repeat: no-repeat;
+            margin-top: 15px;
+            margin-left: 30px;
+        }
+        .Catolog5 h3{
+            font-weight: bold;
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+        .Catolog6{
+            background-color: #dddddd;
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+            background-image: url("Инструменты.png");
+            background-size: 80%;
+            background-position: 70px 55px;
+            background-repeat: no-repeat;
+            margin-top: 15px;
+            margin-left: 30px;
+        }
+        .Catolog6 h3{
+            font-weight: bold;
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+
+        .Catolog7{
+            background-color: #dddddd;
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+            background-image: url("Еврокубы.png");
+            background-size: 100%;
+            background-position: 50px 0px;
+            background-repeat: no-repeat;
+            margin-top: 55px;
+            margin-left: 15px;
+        }
+        .Catolog7 h3{
+            font-weight: bold;
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+        .Catolog8{
+            background-color: #dddddd;
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+            background-image: url("Батареи.png");
+            background-size: 120%;
+            background-position: 30px 65px;
+            background-repeat: no-repeat;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+        .Catolog8 h3{
+            font-weight: bold;
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+
+        .Catolog9{
+            background-color: #dddddd;
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+            background-image: url("Прокат\ Инструмент.png");
+            background-size: 100%;
+            background-position: -10px 45px;
+            background-repeat: no-repeat;
+            margin-top: 15px;
+            margin-left: 30px;
+        }
+        .Catolog9 h3{
+            font-weight: bold;
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+        .Catolog10{
+            background-color: #dddddd;
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+            background-image: url("Крепежи.png");
+            background-size: 100%;
+            background-position: 55px 65px;
+            background-repeat: no-repeat;
+            margin-top: 15px;
+            margin-left: 30px;
+        }
+        .Catolog10 h3{
+            font-weight: bold;
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+
+        .Catolog11{
+            background-color: #dddddd;
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+            background-image: url("Гипсокартон.png");
+            background-size: 100%;
+            background-position: 70px 50px;
+            background-repeat: no-repeat;
+            margin-top: 55px;
+            margin-left: 15px;
+        }
+        .Catolog11 h3{
+            font-weight: bold;
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+        .Catolog12{
+            background-color: #dddddd;
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+            background-image: url("Водононагреватель.png");
+            background-size: 90%;
+            background-position: 50px 45px;
+            background-repeat: no-repeat;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+        .Catolog12 h3{
+            font-weight: bold;
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+        .Catolog13{
+            background-color: #dddddd;
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+            background-image: url("Все\ для\ дома.png");
+            background-size: 150%;
+            background-position: 40px 10px;
+            background-repeat: no-repeat;
+            margin-top: 15px;
+            margin-left: 30px;
+        }
+        .Catolog13 h3{
+            font-weight: bold;
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+        .Catolog14{
+            background-color: #dddddd;
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+            background-image: url("Автоаксессуары.png");
+            background-size: 120%;
+            background-position: 30px 5px;
+            background-repeat: no-repeat;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+        .Catolog14 h3{
+            font-weight: bold;
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+        .vmeste{
+            display: flex;
+        }
+        .fofan{
+            border-radius: 5px;
+            padding: 8px 16px;
+            display: inline-block;
+            margin-left: 5%;
+            border-bottom: 3px solid rgb(0, 0, 0);
+            
+        }
+        .otstyp{
+            margin-bottom: 50px;
+        }
+        .vmeste2{
+            display: flex;
+        }
+        .full{
+            text-decoration: none;
+            font-weight: bold;
+            color: #555555;
+            margin-top: 40px;
+            margin-left: 50px;
+            font-size: 22px;
+        }
+        .full:hover{
+            color: #999;
+        }
+        /* ПЛАНШЕТ */
+@media (max-width: 1024px) {
+    .vmeste {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nevmeste {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    [class^="Catolog"] {
+        width: 180px;
+        height: 180px;
+        margin: 10px;
+    }
+}
+
+/* ТЕЛЕФОН — 2 В РЯД */
+@media (max-width: 600px) {
+    .vmeste2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vmeste {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nevmeste {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    [class^="Catolog"] {
+        width: 50%;
+        height: 150px;
+        margin: 5px 0;
+        background-position: center bottom;
+        background-size: 70%;
+    }
+
+    [class^="Catolog"] h3 {
+        font-size: 14px;
+    }
+
+    .full {
+        margin: 0;
+        font-size: 16px;
+    }
+}
+@media (max-width: 600px) {
+    .vmeste {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nevmeste {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    [class^="Catolog"] h3 {
+        font-size: 18px;
+        margin-top: -3px;
+    }
+}
+@media (max-width: 600px) {
+    .vmeste {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .nevmeste {
+        display: contents;
+    }
+
+    [class^="Catolog"] {
+        width: calc(50% - 10px);
+        margin: 5px;
+    }
+    .Catolog3{
+        background-position: 70px -10px;
+    }
+    .Catolog4{
+        background-position: 30px 25px;
+        background-size: 100%;
+    }
+    .Catolog14{
+        background-position: 40px -10px;
+        background-size: 100%;
+    }
+    .Catolog5{
+        background-position: 80px 35px; 
+    }
+    .Catolog6{
+        background-position: 70px 35px; 
+    }
+    .Catolog8{
+        background-position: 40px 35px;
+        background-size: 100%;
+    }
+    .Catolog7{
+        background-position: 50px -20px;
+        background-size: 100%;
+    }
+    .Catolog12{
+        background-position: 50px 15px;
+    }
+    .Catolog2{
+        background-position: 80px 35px;
+    }
+    .Catolog1{
+        background-position: 70px 35px;
+    }
+    .Catolog9{
+        background-position: -10px 35px;
+    }
+    .Catolog10{
+        background-position: 55px 35px;
+    }
+    .Catolog11{
+        background-position: 70px 35px;
+    }
+    .Catolog13{
+        background-position: 40px 10px;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="vmeste2">
+        <h1 class="fofan" id="asso">Все ассортименты</h1> <a href="jffffff.html" class="full">Назад</a>
+        </div>
+        <div class="otstyp">
+        <div class="vmeste">
+            <div class="nevmeste">
+        <div class="Catolog1">
+            <h3>Сантехника</h3>
+        </div>
+        <div class="Catolog2">
+            <h3>Краски и лаки</h3>
+        </div>
+        <div class="Catolog13">
+            <h3>Все для дома</h3>
+        </div>
+            </div>
+            <div class="nevmeste">
+        <div class="Catolog3">
+            <h3>Электротовары</h3>
+        </div>
+        <div class="Catolog4">
+            <h3>Клеи, герметики и монтажня пена</h3>
+        </div>
+        <div class="Catolog14">
+            <h3>Автоакссесуары</h3>
+        </div>
+            </div>
+            <div class="nevmeste">
+        <div class="Catolog5">
+            <h3>Сухие смеси</h3>
+        </div>
+        <div class="Catolog6">
+            <h3>Инструменты</h3>
+        </div>
+            </div>
+            <div class="nevmeste">
+        <div class="Catolog7">
+            <h3>Еврокубы и разные емкости</h3>
+        </div>
+        <div class="Catolog8">
+            <h3>Все для отопительной системы и водоснабжения</h3>
+        </div>
+            </div>
+            <div class="nevmeste">
+        <div class="Catolog9">
+            <h3>Прокат инструментов</h3>
+        </div>
+        <div class="Catolog10">
+            <h3>Крепежные материалы</h3>
+        </div>
+            </div>
+            <div class="nevmeste">
+        <div class="Catolog11">
+            <h3>Гипсокартон и комплектующие</h3>
+        </div>
+        <div class="Catolog12">
+            <h3>Электро-
+                водонагреватель</h3>
+        </div>
+            </div>
+            </div>
+        </div>
+</body>
+</html>
