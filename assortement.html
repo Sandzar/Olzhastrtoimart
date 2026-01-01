@@ -39,7 +39,7 @@
             color: #555555;
             font-size: 20px;
             padding: 10px 20px;
-            border: 1px solid #ccc;
+            border: 2px solid #ccc;
             border-radius: 8px;
             transition: all 0.3s ease;
         }
@@ -91,20 +91,22 @@
         /* == Индивидуальные стили для картинок == */
         /* Я сохранил ваши настройки позиций, но рекомендую использовать 'center' или 'bottom right' */
         
-        .c1 { background: #ddd url("Кран Сантехник.png") no-repeat 70px 35px / 80%; }
-        .c2 { background: #ddd url("Краски и лаки.png") no-repeat 80px 65px / 80%; }
-        .c3 { background: #ddd url("Электротовары.png") no-repeat 70px 10px / 80%; }
-        .c4 { background: #ddd url("Монтажная пена.png") no-repeat 30px 65px / 120%; }
-        .c5 { background: #ddd url("Сухие смеси.png") no-repeat 80px 55px / 80%; }
-        .c6 { background: #ddd url("Инструменты.png") no-repeat 70px 55px / 80%; }
-        .c7 { background: #ddd url("Еврокубы.png") no-repeat 50px 0px / 100%; }
-        .c8 { background: #ddd url("Батареи.png") no-repeat 30px 65px / 120%; }
+        .c1 { background: #ddd url("Сантехника.png") no-repeat -40px 30px/ 140%; }
+        .c2 { background: #ddd url("краски и лаки.png") no-repeat center center / 80%; }
+        .c3 { background: #ddd url("Электро.png") no-repeat -10px -20px / 100%; }
+        .c4 { background: #ddd url("клеи.png") no-repeat center center / 70%; }
+        .c5 { background: #ddd url("Сухие смеси.png") no-repeat 20px 55px / 80%; }
+        .c6 { background: #ddd url("Инструменты и ручные.png") no-repeat center center / 80%; }
+        .c7 { background: #ddd url("Еврокубы.png") no-repeat 20px 45px / 80%; }
+        .c8 { background: #ddd url("отпление и.png") no-repeat center center / 90%; }
         .c9 { background: #ddd url("Прокат Инструмент.png") no-repeat -10px 45px / 100%; }
         .c10 { background: #ddd url("Крепежи.png") no-repeat 55px 65px / 100%; }
-        .c11 { background: #ddd url("Гипсокартон.png") no-repeat 70px 50px / 100%; }
-        .c12 { background: #ddd url("Водононагреватель.png") no-repeat 50px 45px / 90%; }
-        .c13 { background: #ddd url("Все для дома.png") no-repeat 40px 30px / 75%; }
+        .c11 { background: #ddd url("Гипсокартон.png") no-repeat 70px 30px / 100%; }
+        .c12 { background: #ddd url("Водононагреватель.png") no-repeat 0px 45px / 90%; }
+        .c13 { background: #ddd url("Все для дома.png") no-repeat 20px 20px / 75%; }
         .c14 { background: #ddd url("Автоаксессуары.png") no-repeat 30px 5px / 120%; }
+        .c15 { background: #ddd url("Водоснаб.png") no-repeat center center / 90%; }
+        .c16 { background: #ddd url("Вентиляция.png") no-repeat center center/ 80%; }
 
 
         /* == Адаптив для телефонов (экраны меньше 480px) == */
@@ -125,6 +127,7 @@
                 font-size: 16px; /* Уменьшаем шрифт заголовков */
                 padding: 10px;
             }
+            .c13 { background-position: 40px 20px / 75%; }
         }
     </style>
 </head>
@@ -150,11 +153,9 @@
         <div class="card c10"><h3>Крепежные материалы</h3></div>
         <div class="card c11"><h3>Гипсокартон и комплектующие</h3></div>
         <div class="card c12"><h3>Электро-водонагреватель</h3></div>
+        <div class="card c15"><h3>Водоснабжение</h3></div>
+        <div class="card c16"><h3>Вентиляция</h3></div>
     </div>
 
 </body>
 </html>
-
-
-
-
