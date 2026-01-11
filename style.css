@@ -1385,6 +1385,11 @@
     flex-direction: column;
   }
 
+  .magaz h1{
+    font-size: 26px;
+    width: 260px;
+  }
+
   .rabota,
   .nomer,
   .adress {
@@ -1485,6 +1490,7 @@
   }
 
 }
+
 
 
 
