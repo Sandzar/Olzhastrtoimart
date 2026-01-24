@@ -551,10 +551,23 @@
         });
 
     });
+        // Функция показа сообщения
+    function showTgMessage() {
+        document.getElementById('tg_corner_msg').classList.add('active');
+    }
+
+    // Функция скрытия сообщения (уезжает вправо)
+    function hideTgMessage() {
+        document.getElementById('tg_corner_msg').classList.remove('active');
+    }
+
+    // Таймер: сообщение выйдет через 3 секунды после загрузки (3000 мс)
+    setTimeout(showTgMessage, 2000);
     </script>
 </body>
 
 </html>
+
 
 
 
