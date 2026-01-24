@@ -46,6 +46,16 @@
 <div id="carouselTrack" style="display:none"></div>
 
 <body>
+    <div id="tg_popup_overlay_unique_id">
+    <div class="tg_popup_container_card">
+        <span class="tg_popup_close_cross">&times;</span>
+        
+        <h2 class="tg_popup_header_title">НОВИНКА!</h2>
+        <p class="tg_popup_desc_text">У нас появился свой бот помощник в Telegram</p>
+        
+        <a href="https://t.me/Olzhastroymartbot" target="_blank" class="tg_popup_action_button">Перейти к бот помощнику</a>
+    </div>
+</div>
     <div class="conteinermoreee">
     <div class="main-content" id="main-content">
         <div class="navbar">
@@ -476,10 +486,63 @@
                 behavior: 'smooth'
             });
         }
+
+
+
+
+
+        // Оборачиваем код в DOMContentLoaded, чтобы он сработал после загрузки страницы
+    document.addEventListener("DOMContentLoaded", function() {
+        
+        // 1. Находим элементы по их уникальным идентификаторам и классам
+        const popupOverlay = document.getElementById('tg_popup_overlay_unique_id');
+        const closeCrossBtn = document.querySelector('.tg_popup_close_cross');
+        const popupActionButton = document.querySelector('.tg_popup_action_button');
+        
+        // Имя класса, который делает окно видимым
+        const visibleStateClass = 'tg_popup_visible_state';
+
+        // === НАСТРОЙКИ ===
+        // Время задержки в миллисекундах (7000 = 7 секунд)
+        const delayTimeMs = 7000; 
+        // =================
+
+
+        // Функция открытия окна
+        function openTgUniquePopup() {
+            popupOverlay.classList.add(visibleStateClass);
+        }
+
+        // Функция закрытия окна
+        function closeTgUniquePopup() {
+            popupOverlay.classList.remove(visibleStateClass);
+        }
+
+        // Запускаем таймер
+        setTimeout(openTgUniquePopup, delayTimeMs);
+
+        // === Обработчики событий (клики) ===
+        
+        // Клик по крестику -> закрыть
+        closeCrossBtn.addEventListener('click', closeTgUniquePopup);
+
+        // Клик по кнопке перехода -> закрыть (опционально, можно убрать эту строку)
+        popupActionButton.addEventListener('click', closeTgUniquePopup);
+
+        // Клик по темному фону (мимо окна) -> закрыть
+        popupOverlay.addEventListener('click', function(event) {
+            // Проверяем, что клик был именно по оверлею, а не по его содержимому
+            if (event.target === popupOverlay) {
+                closeTgUniquePopup();
+            }
+        });
+
+    });
     </script>
 </body>
 
 </html>
+
 
 
 
