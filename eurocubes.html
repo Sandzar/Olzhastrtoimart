@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Еврокубы и емкости в Косшы и Астане — Олжа</title>
+
+  <!-- SEO базово -->
+  <meta name="description"
+    content="Еврокубы 1000 л, бочки и канистры. Косшы и Астана: наличие, подбор, консультация. Олжа — любой запрос, не вопрос." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://olzhastroymarket.kz/eurokub.html" />
+
+  <!-- Open Graph (для превью в мессенджерах) -->
+  <meta property="og:title" content="Еврокубы и разные емкости — Олжа" />
+  <meta property="og:description" content="Еврокубы 1000 л, бочки и канистры. Косшы и Астана." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      background: #fff;
+    }
+
+    /* ===== NAVBAR (как на olzhastroymarket: лого | кнопка/ссылка | слоган | контакты) ===== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+    }
+
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 10px 15px;
+      height: 70px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .logotip {
+      height: 100px;
+      width: auto;
+      border-radius: 10px;
+      display: block;
+
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      transition: background 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .nav-aa {
+      text-decoration: none;
+      color: #333;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      transition: background 0.2s ease;
+      white-space: nowrap;
+      display: none;
+    }
+
+    .nav-a:hover {
+      background: rgba(0, 0, 0, 0.06);
+    }
+
+    .nav-aa:hover {
+      background: rgba(0, 0, 0, 0.06);
+    }
+
+    .nav-cta {
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .slogan {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 900;
+      color: #222;
+      white-space: nowrap;
+    }
+
+    /* Бургер */
+    .burger {
+      display: none;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      background: #fff;
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    /* Выпадающее меню на мобилке */
+    .mobile-menu {
+      display: none;
+      border-top: 1px solid #eee;
+      padding: 10px 15px 14px;
+      background: #fff;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 10px 10px;
+      border-radius: 10px;
+      font-weight: 900;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .mobile-menu a:hover {
+      background: rgba(0, 0, 0, 0.06);
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    /* ===== LAYOUT ===== */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 18px 15px 40px;
+    }
+
+    .name {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 18px;
+      flex-wrap: wrap;
+    }
+
+    .name a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .name .sep {
+      font-size: 14px;
+      color: #666;
+      font-weight: 800;
+    }
+
+    .name .current {
+      margin: 0;
+      font-size: 14px;
+      color: rgb(182, 182, 0);
+      font-weight: 900;
+    }
+
+    .nameglav {
+      font-family: "Arial Black", Arial, sans-serif;
+      font-size: clamp(20px, 2.4vw, 28px);
+      color: #222;
+      margin: 0 0 18px;
+    }
+
+    /* ===== GRID (вместо flex + фиксированных 400px) ===== */
+    .vmeste_vse {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 15px;
+      margin: 0 0 20px;
+    }
+
+    .card {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      background: #fff;
+      box-shadow: 0 8px 5px rgba(0, 0, 0, 0.10);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .name a:hover {
+      color: rgb(182, 182, 0);
+
+    }
+
+    .photo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .photo img {
+      width: 100%;
+      height: clamp(180px, 28vw, 325px);
+      object-fit: contain;
+      display: block;
+      background: #fff;
+    }
+
+    .description h2 {
+      font-family: "Arial Black", Arial, sans-serif;
+      font-size: 18px;
+      color: #333;
+      margin: 14px 0 10px;
+    }
+
+    .description p {
+      font-size: 14px;
+      color: #414141;
+      margin: 0 0 12px;
+      line-height: 1.35;
+    }
+
+    .vmeste {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .vmeste p {
+      margin: 0;
+      border: 2px solid #888;
+      border-radius: 20px;
+      padding: 5px 10px;
+      font-size: 13px;
+      color: #333;
+    }
+
+    .section {
+      margin-top: 30px;
+      padding-top: 12px;
+      border-top: 1px solid #eee;
+    }
+
+    .section h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .section p {
+      margin: 0;
+      font-size: 14px;
+      color: #444;
+      line-height: 1.4;
+    }
+
+    .magaz {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .rabota,
+    .nomer,
+    .adress {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      border-radius: 40px;
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 600px;
+
+      background-color: white;
+      text-align: center;
+    }
+
+    .rabota h2 {
+      margin-top: 35px;
+    }
+
+    .rabota h2,
+    .nomer h2,
+    .adress h2 {
+      margin: 0px;
+    }
+
+    .rabota.is-visible,
+    .nomer.is-visible,
+    .adress.is-visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .ssilka {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .gis,
+    .googlemap,
+    .yandex,
+    .WhatsApp,
+    .instagram {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      margin: 0 5px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .footer {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      font-size: 18px;
+      line-height: 1.6;
+      font-weight: bold;
+      margin-top: 50px;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      width: 100%;
+    }
+
+    .footer p {
+      margin: 5px 0;
+    }
+
+    .xxxx {
+      text-align: center;
+      margin-top: 0px;
+      font-size: 14px;
+      color: #636363;
+      margin-bottom: 0px;
+      background-color: #c9c9c9;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    .btnSS {
+      background-color: #FFD300;
+      color: rgb(63, 63, 63);
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .vipP {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .gis {
+      background-image: url("2 гис.jpg");
+    }
+
+    .googlemap {
+      background-image: url("гугл карта.png");
+      background-size: 170%;
+    }
+
+    .yandex {
+      background-image: url("Яндекс карта.png");
+    }
+
+    .WhatsApp {
+      background-image: url("Ватсап.jpg");
+      background-size: 170%;
+    }
+
+    .instagram {
+      background-image: url("инстаграм.jpeg");
+      background-size: 130%;
+    }
+
+    /* ===== RESPONSIVE NAV ===== */
+    @media (max-width: 900px) {
+      .slogan {
+        display: none;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+
+      .burger {
+        display: inline-block;
+      }
+
+      .nav-inner {
+        height: 64px;
+      }
+
+      .logotip {
+        height: 42px;
+      }
+
+      .brand a {
+        display: none;
+      }
+
+      .rabota,
+      .nomer,
+      .adress {
+        width: 90%;
+        margin: 15px auto;
+
+      }
+
+    }
+  </style>
+
+  <!-- Schema.org (чтобы поисковики лучше понимали страницу) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Строительный магазин Олжа",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "KZ",
+      "addressLocality": "Косшы"
+    },
+    "areaServed": ["Косшы", "Астана"],
+    "url": "https://olzhastroymarket.kz/"
+  }
+  </script>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="brand">
+        <img src="ЛОГО.png" class="logotip" alt="Строительный магазин Олжа — логотип" />
+        <a class="nav-a" href="index.html">Главная</a>
+      </div>
+
+      <p class="slogan">Любой запрос, не вопрос</p>
+
+      <nav class="nav-links" aria-label="Навигация">
+        <a class="nav-aa" href="index.html">Главная</a>
+        <a class="nav-a" href="#kont">Контакты &amp; инфо</a>
+      </nav>
+
+      <button class="burger" type="button" aria-controls="mobileMenu" aria-expanded="false" id="burgerBtn">
+        ☰
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Главная</a>
+      <a href="assortement.html">Наш ассортимент</a>
+      <a href="#kont">Контакты &amp; инфо</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <nav class="name" aria-label="Хлебные крошки">
+      <a href="index.html">Главная</a>
+      <span class="sep">-</span>
+      <a href="assortement.html">Ассортимент</a>
+      <span class="sep">-</span>
+      <p class="current">Еврокубы и разные емкости</p>
+    </nav>
+
+    <h1 class="nameglav">Еврокубы и разные емкости (Косшы / Астана)</h1>
+
+    <section class="vmeste_vse" aria-label="Ассортимент">
+      <article class="card">
+        <div class="photo">
+          <img src="Евро кубы.jpeg" alt="Еврокуб 1000 литров (IBC) — для воды и жидкостей" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Еврокубы 1000 литров</h2>
+          <p>Пластмассовые, 1000 л, для хранения и транспортировки воды и других жидкостей.</p>
+        </div>
+        <div class="vmeste">
+          <p>1000 литров</p>
+          <p>Пластмассовое</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo">
+          <img src="205kg.png" alt="Бочка металлическая 200 литров" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Бочки 200 литров</h2>
+          <p>Металлические, 200 л, для хранения и перевозки жидкостей (вода, топливо, масла).</p>
+        </div>
+        <div class="vmeste">
+          <p>200 литров</p>
+          <p>Металлическое</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo">
+          <img src="Пласс.jpeg" alt="Бочка пластмассовая 200 литров" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Бочки 200 литров</h2>
+          <p>Пластмассовые, 200 л, для хранения и перевозки жидкостей (вода, топливо, масла).</p>
+        </div>
+        <div class="vmeste">
+          <p>200 литров</p>
+          <p>Пластмассовое</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo">
+          <img src="Пласс.jpeg" alt="Бочка пластмассовая 150 литров" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Бочки 150 литров</h2>
+          <p>Пластмассовые, 150 л, для хранения и перевозки жидкостей (вода, топливо, масла).</p>
+        </div>
+        <div class="vmeste">
+          <p>150 литров</p>
+          <p>Пластмассовое</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo">
+          <img src="кан 60л.png" alt="Канистра 60 литров" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Канистры 60 литров</h2>
+          <p>Пластмассовые, 60 л, для хранения и перевозки жидкостей (вода, топливо, масла).</p>
+        </div>
+        <div class="vmeste">
+          <p>60 литров</p>
+          <p>Пластмассовое</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo">
+          <img src="Кан 30л.png" alt="Канистра 30 литров" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Канистры 30 литров</h2>
+          <p>Пластмассовые, 30 л, для хранения и перевозки жидкостей (вода, топливо, масла).</p>
+        </div>
+        <div class="vmeste">
+          <p>30 литров</p>
+          <p>Пластмассовое</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo">
+          <img src="Кан 20л.png" alt="Канистра 20 литров" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Канистры 20 литров</h2>
+          <p>Пластмассовые, 20 л, для хранения и перевозки жидкостей (вода, топливо, масла).</p>
+        </div>
+        <div class="vmeste">
+          <p>20 литров</p>
+          <p>Пластмассовое</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Важно для поиска по городам: реальные упоминания в тексте -->
+    <section class="section" aria-label="Где купить">
+      <h3>Где купить еврокубы</h3>
+      <p>
+        Еврокубы, бочки и канистры доступны для клиентов из Косшы и Астаны.
+        Если вы ищете “еврокубы в Астане”, “еврокубы в Косшы” — эта страница именно про этот ассортимент.
+      </p>
+    </section>
+
+    <section id="kont" class="section" aria-label="Контакты и информация">
+      <h3>Контакты &amp; инфо</h3>
+      <div class="vmeste">
+        <div class="rabota">
+          <h2>График работы<br>9:00-21:00<br>Без обеда и выходных </h2>
+        </div>
+
+        <div class="adress">
+          <h2>Наш адрес:</h2>
+          <h2>Ул. Кобыланды батыр 81, Косшы</h2>
+          <div class="ssilka">
+            <button class="gis"
+              onclick="press(this);window.location.href=`https://2gis.kz/astana/geo/70000001081896930`"></button>
+            <button class="googlemap"
+              onclick="press(this);window.location.href=`https://maps.app.goo.gl/XN8NC9v4SFRXS81h9?g_st=awb`"></button>
+            <button class="yandex"
+              onclick="press(this);window.location.href=`https://yandex.kz/maps/-/CLvNZNkk`"></button>
+          </div>
+
+        </div>
+        <div class="nomer">
+          <h2>Наш номер телефон:</h2>
+          <h2>+7 775 447 9913</h2>
+          <button class="WhatsApp" onclick="press(this);window.location.href=`https://wa.me/77754479913`"></button>
+          <button class="instagram"
+            onclick="press(this);window.location.href=`https://www.instagram.com/olzha.stroymart`"></button>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+  <div class="footer">
+      <p class="vipP">Нашел ошибку(-и) сайта?</p>
+      <p>Напиши нам:</p>
+      <button
+        onclick="window.location.href='https://wa.me/77762857679?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%8F%20%D0%BF%D0%BE%20%D0%BE%D0%B1%D1%8A%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8E'"
+        class="btnSS">WhatsApp</button>
+
+      <button onclick="window.location.href='https://t.me/vebrazrab2011'" class="btnSS">Telegram</button>
+      <p>Или через почту (Рекомендуется):</p>
+      <button onclick="window.location.href='forum.html'" class="btnSS">Email</button>
+    </div>
+    <p class="xxxx">© 2025 Строительный магазин "Олжа". Все права защищены.</p>
+    </div>
+
+  <script>
+    const btn = document.getElementById('burgerBtn');
+    const menu = document.getElementById('mobileMenu');
+
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+
+    // Закрывать меню при клике по ссылке
+    menu.addEventListener('click', (e) => {
+      if (e.target.tagName.toLowerCase() === 'a') {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+</body>
+
+</html>
