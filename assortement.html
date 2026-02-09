@@ -31,7 +31,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap; /* Позволяет переноситься на новую строку на малых экранах */
+            flex-wrap: wrap;
             margin-bottom: 30px;
             border-bottom: 2px solid #ddd;
             padding-bottom: 10px;
@@ -65,28 +65,31 @@
         /* == Сетка каталога (АДАПТИВНОСТЬ ТУТ) == */
         .catalog-grid {
             display: grid;
-            /* Магия адаптивности:
-               Карточки будут минимум 160px, но будут растягиваться, заполняя строку.
-               Количество колонок подбирается автоматически. */
-            grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); 
-            gap: 20px; /* Расстояние между карточками */
+            grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+            gap: 20px;
             width: 100%;
         }
 
-        /* == Общий стиль карточки == */
+        /* == Общий стиль карточки (Теперь это ссылка) == */
         .card {
             background-color: #dddddd;
             border-radius: 20px;
-            height: 200px; /* Фиксированная высота */
+            height: 200px;
             position: relative;
             overflow: hidden;
-            transition: transform 0.2s; /* Анимация при наведении */
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            
+            /* Новые стили для тега <a> чтобы он выглядел как блок */
+            display: block;           /* Важно: ссылка ведет себя как блок */
+            text-decoration: none;    /* Убираем подчеркивание */
+            color: inherit;           /* Убираем синий цвет ссылки */
+            cursor: pointer;
         }
 
         .card:hover {
-            transform: translateY(-5px); /* Легкое поднятие при наведении */
-            box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         }
 
         .card h3 {
@@ -99,17 +102,57 @@
             left: 0;
             width: 100%;
             box-sizing: border-box;
+            color: #222; /* Явно задаем цвет текста, чтобы не был синим */
         }
 
+        .name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 0 18px;
+            flex-wrap: wrap;
+        }
+
+        .name a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 800;
+            font-size: 14px;
+        }
+
+        .name .sep {
+            font-size: 14px;
+            color: #666;
+            font-weight: 800;
+        }
+
+        .name .current {
+            margin: 0;
+            font-size: 14px;
+            color: rgb(182, 182, 0);
+            font-weight: 900;
+        }
+
+        .nameglav {
+            font-family: "Arial Black", Arial, sans-serif;
+            font-size: clamp(20px, 2.4vw, 28px);
+            color: #222;
+            margin: 0 0 18px;
+        }
+
+        .name a:hover {
+            color: rgb(182, 182, 0);
+        }
+
+
         /* == Индивидуальные стили для картинок == */
-        /* Я сохранил ваши настройки позиций, но рекомендую использовать 'center' или 'bottom right' */
-        
         .c1 { background: #ddd url("Сантехника.png") no-repeat -40px 30px/ 140%; }
         .c2 { background: #ddd url("краски и лаки.png") no-repeat center center / 80%; }
         .c3 { background: #ddd url("Электро.png") no-repeat -10px -20px / 100%; }
         .c4 { background: #ddd url("клеи.png") no-repeat center center / 70%; }
         .c5 { background: #ddd url("Сухие смеси.png") no-repeat 20px 55px / 80%; }
         .c6 { background: #ddd url("Инструменты и ручные.png") no-repeat center center / 80%; }
+        /* У c7 убрал border: none, так как это теперь ссылка, а не кнопка */
         .c7 { background: #ddd url("Еврокубы.png") no-repeat 20px 45px / 80%; }
         .c8 { background: #ddd url("отопление.png") no-repeat center center / 90%; }
         .c9 { background: #ddd url("Прокат Инструмент.png") no-repeat -10px 45px / 100%; }
@@ -136,7 +179,6 @@
             margin: 0 auto;
             padding: 10px 15px;
             height: 70px;
-
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -155,7 +197,6 @@
             width: auto;
             border-radius: 10px;
             display: block;
-
         }
 
         .nav-links {
@@ -187,11 +228,7 @@
             display: none;
         }
 
-        .nav-a:hover {
-            background: rgba(0, 0, 0, 0.06);
-        }
-
-        .nav-aa:hover {
+        .nav-a:hover, .nav-aa:hover {
             background: rgba(0, 0, 0, 0.06);
         }
 
@@ -246,46 +283,6 @@
         .mooomo{
             padding: 20px;
         }
-        .name {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin: 0 0 18px;
-            flex-wrap: wrap;
-        }
-
-        .name a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 800;
-            font-size: 14px;
-        }
-
-        .name .sep {
-            font-size: 14px;
-            color: #666;
-            font-weight: 800;
-        }
-
-        .name .current {
-            margin: 0;
-            font-size: 14px;
-            color: rgb(182, 182, 0);
-            font-weight: 900;
-        }
-
-        .nameglav {
-            font-family: "Arial Black", Arial, sans-serif;
-            font-size: clamp(20px, 2.4vw, 28px);
-            color: #222;
-            margin: 0 0 18px;
-        }
-
-        .name a:hover {
-            color: rgb(182, 182, 0);
-
-        }
-
 
         /* == Адаптив для телефонов (экраны меньше 480px) == */
         @media (max-width: 480px) {
@@ -294,57 +291,39 @@
                 align-items: flex-start;
                 gap: 15px;
             }
-            
+
             .catalog-grid {
-                /* На очень маленьких экранах (iPhone SE и т.д.) можно сделать 2 колонки поменьше или 1 большую */
-                grid-template-columns: 1fr 1fr; 
+                grid-template-columns: 1fr 1fr;
                 gap: 15px;
             }
 
             .card h3 {
-                font-size: 16px; /* Уменьшаем шрифт заголовков */
+                font-size: 16px;
                 padding: 10px;
             }
+
             .c13 { background-position: 40px 20px / 75%; }
             .c15 { background-position: center center / 80%; }
         }
+
         /* ===== RESPONSIVE NAV ===== */
         @media (max-width: 900px) {
-            .slogan {
-                display: none;
-            }
+            .slogan { display: none; }
         }
 
         @media (max-width: 720px) {
-            .nav-links {
-                display: none;
-            }
-
-            .burger {
-                display: inline-block;
-            }
-
-            .nav-inner {
-                height: 64px;
-            }
-
-
-
-            .brand a {
-                display: none;
-            }
-
-            .rabota,
-            .nomer,
-            .adress {
+            .nav-links { display: none; }
+            .burger { display: inline-block; }
+            .nav-inner { height: 64px; }
+            .brand a { display: none; }
+            .rabota, .nomer, .adress {
                 width: 90%;
                 margin: 15px auto;
-
             }
-
         }
     </style>
 </head>
+
 <body>
     <header class="navbar">
         <div class="nav-inner">
@@ -371,37 +350,72 @@
             <a href="#kont">Контакты &amp; инфо</a>
         </div>
     </header>
+
     <div class="mooomo">
         <nav class="name" aria-label="Хлебные крошки">
             <a href="index.html">Главная</a>
             <span class="sep">-</span>
             <p class="current">Ассортимент</p>
         </nav>
-    <div class="header-container">
-        <h1 class="page-title">Все ассортименты</h1>
-        <a href="index.html" class="back-link">Назад</a>
+        <div class="header-container">
+            <h1 class="page-title">Все ассортименты</h1>
+        </div>
+
+        <div class="catalog-grid">
+            <a href="#" class="card c1">
+                <h3>Сантехника</h3>
+            </a>
+            <a href="#" class="card c2">
+                <h3>Краски и лаки</h3>
+            </a>
+            <a href="#" class="card c13">
+                <h3>Все для дома</h3>
+            </a>
+            <a href="#" class="card c3">
+                <h3>Электротовары</h3>
+            </a>
+            <a href="#" class="card c4">
+                <h3>Клеи, герметики и монтажная пена</h3>
+            </a>
+            <a href="#" class="card c14">
+                <h3>Автоакссесуары</h3>
+            </a>
+            <a href="#" class="card c5">
+                <h3>Сухие смеси</h3>
+            </a>
+            <a href="#" class="card c6">
+                <h3>Инструменты</h3>
+            </a>
+            <a href="eurocubes.html" class="card c7">
+                <h3>Еврокубы и разные емкости</h3>
+            </a>
+            <a href="#" class="card c8">
+                <h3>Все для отопительной системы</h3>
+            </a>
+            <a href="#" class="card c9">
+                <h3>Прокат инструментов</h3>
+            </a>
+            <a href="#" class="card c10">
+                <h3>Крепежные материалы</h3>
+            </a>
+            <a href="#" class="card c11">
+                <h3>Гипсокартон и комплектующие</h3>
+            </a>
+            <a href="#" class="card c12">
+                <h3>Электро-водонагреватель</h3>
+            </a>
+            <a href="#" class="card c15">
+                <h3>Водоснабжение</h3>
+            </a>
+            <a href="#" class="card c16">
+                <h3>Вентиляция</h3>
+            </a>
+            <a href="#" class="card c17">
+                <h3>Строительный инвентарь</h3>
+            </a>
+        </div>
     </div>
 
-    <div class="catalog-grid">
-        <div class="card c1"><h3>Сантехника</h3></div>
-        <div class="card c2"><h3>Краски и лаки</h3></div>
-        <div class="card c13"><h3>Все для дома</h3></div>
-        <div class="card c3"><h3>Электротовары</h3></div>
-        <div class="card c4"><h3>Клеи, герметики и монтажная пена</h3></div>
-        <div class="card c14"><h3>Автоакссесуары</h3></div>
-        <div class="card c5"><h3>Сухие смеси</h3></div>
-        <div class="card c6"><h3>Инструменты</h3></div>
-        <div class="card c7"><h3>Еврокубы и разные емкости</h3></div>
-        <div class="card c8"><h3>Все для отопительной системы</h3></div>
-        <div class="card c9"><h3>Прокат инструментов</h3></div>
-        <div class="card c10"><h3>Крепежные материалы</h3></div>
-        <div class="card c11"><h3>Гипсокартон и комплектующие</h3></div>
-        <div class="card c12"><h3>Электро-водонагреватель</h3></div>
-        <div class="card c15"><h3>Водоснабжение</h3></div>
-        <div class="card c16"><h3>Вентиляция</h3></div>
-        <div class="card c17"><h3>Строительный инвентарь</h3></div>
-    </div>
-    </div>
     <script>
         const btn = document.getElementById('burgerBtn');
         const menu = document.getElementById('mobileMenu');
@@ -419,8 +433,8 @@
             }
         });
     </script>
-
 </body>
+
 </html>
 
 
