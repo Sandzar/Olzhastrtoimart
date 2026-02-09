@@ -123,6 +123,170 @@
         .c16 { background: #ddd url("Вентиляция.png") no-repeat center center/ 80%; }
         .c17 { background: #ddd url("Инвент.png") no-repeat center center/ 90%; }
 
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+            margin: 0px;
+        }
+
+        .nav-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 10px 15px;
+            height: 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+        }
+
+        .logotip {
+            height: 100px;
+            width: auto;
+            border-radius: 10px;
+            display: block;
+
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 800;
+            font-size: 14px;
+            padding: 8px 10px;
+            border-radius: 10px;
+            transition: background 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .nav-aa {
+            text-decoration: none;
+            color: #333;
+            font-weight: 800;
+            font-size: 14px;
+            padding: 8px 10px;
+            border-radius: 10px;
+            transition: background 0.2s ease;
+            white-space: nowrap;
+            display: none;
+        }
+
+        .nav-a:hover {
+            background: rgba(0, 0, 0, 0.06);
+        }
+
+        .nav-aa:hover {
+            background: rgba(0, 0, 0, 0.06);
+        }
+
+        .nav-cta {
+            border: 1px solid rgba(0, 0, 0, 0.25);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .slogan {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 900;
+            color: #222;
+            white-space: nowrap;
+        }
+
+        /* Бургер */
+        .burger {
+            display: none;
+            border: 1px solid rgba(0, 0, 0, 0.25);
+            background: #fff;
+            border-radius: 10px;
+            padding: 8px 10px;
+            font-weight: 900;
+            cursor: pointer;
+        }
+
+        /* Выпадающее меню на мобилке */
+        .mobile-menu {
+            display: none;
+            border-top: 1px solid #eee;
+            padding: 10px 15px 14px;
+            background: #fff;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 10px 10px;
+            border-radius: 10px;
+            font-weight: 900;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .mobile-menu a:hover {
+            background: rgba(0, 0, 0, 0.06);
+        }
+
+        .mobile-menu.open {
+            display: block;
+        }
+        .mooomo{
+            padding: 20px;
+        }
+        .name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 0 18px;
+            flex-wrap: wrap;
+        }
+
+        .name a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 800;
+            font-size: 14px;
+        }
+
+        .name .sep {
+            font-size: 14px;
+            color: #666;
+            font-weight: 800;
+        }
+
+        .name .current {
+            margin: 0;
+            font-size: 14px;
+            color: rgb(182, 182, 0);
+            font-weight: 900;
+        }
+
+        .nameglav {
+            font-family: "Arial Black", Arial, sans-serif;
+            font-size: clamp(20px, 2.4vw, 28px);
+            color: #222;
+            margin: 0 0 18px;
+        }
+
+        .name a:hover {
+            color: rgb(182, 182, 0);
+
+        }
+
 
         /* == Адаптив для телефонов (экраны меньше 480px) == */
         @media (max-width: 480px) {
@@ -145,10 +309,75 @@
             .c13 { background-position: 40px 20px / 75%; }
             .c15 { background-position: center center / 80%; }
         }
+        /* ===== RESPONSIVE NAV ===== */
+        @media (max-width: 900px) {
+            .slogan {
+                display: none;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .nav-links {
+                display: none;
+            }
+
+            .burger {
+                display: inline-block;
+            }
+
+            .nav-inner {
+                height: 64px;
+            }
+
+
+
+            .brand a {
+                display: none;
+            }
+
+            .rabota,
+            .nomer,
+            .adress {
+                width: 90%;
+                margin: 15px auto;
+
+            }
+
+        }
     </style>
 </head>
 <body>
+    <header class="navbar">
+        <div class="nav-inner">
+            <div class="brand">
+                <img src="ЛОГО2.png" class="logotip" alt="Строительный магазин Олжа — логотип" />
+                <a class="nav-a" href="index.html">Главная</a>
+            </div>
 
+            <p class="slogan">Любой запрос, не вопрос</p>
+
+            <nav class="nav-links" aria-label="Навигация">
+                <a class="nav-aa" href="index.html">Главная</a>
+                <a class="nav-a" href="#kont">Контакты &amp; инфо</a>
+            </nav>
+
+            <button class="burger" type="button" aria-controls="mobileMenu" aria-expanded="false" id="burgerBtn">
+                ☰
+            </button>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html">Главная</a>
+            <a href="assortement.html">Наш ассортимент</a>
+            <a href="#kont">Контакты &amp; инфо</a>
+        </div>
+    </header>
+    <div class="mooomo">
+        <nav class="name" aria-label="Хлебные крошки">
+            <a href="index.html">Главная</a>
+            <span class="sep">-</span>
+            <p class="current">Ассортимент</p>
+        </nav>
     <div class="header-container">
         <h1 class="page-title">Все ассортименты</h1>
         <a href="index.html" class="back-link">Назад</a>
@@ -173,9 +402,28 @@
         <div class="card c16"><h3>Вентиляция</h3></div>
         <div class="card c17"><h3>Строительный инвентарь</h3></div>
     </div>
+    </div>
+    <script>
+        const btn = document.getElementById('burgerBtn');
+        const menu = document.getElementById('mobileMenu');
+
+        btn.addEventListener('click', () => {
+            const open = menu.classList.toggle('open');
+            btn.setAttribute('aria-expanded', String(open));
+        });
+
+        // Закрывать меню при клике по ссылке
+        menu.addEventListener('click', (e) => {
+            if (e.target.tagName.toLowerCase() === 'a') {
+                menu.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
 
 </body>
 </html>
+
 
 
 
