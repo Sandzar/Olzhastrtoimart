@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Прокат инструментов — услуги аренды</title>
+
+  <style>
+    :root {
+      --text: #222;
+      --muted: #666;
+      --bg: #fff;
+      --card: #f6f6f6;
+      --border: rgba(0, 0, 0, 0.12);
+      --shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+      --radius: 16px;
+      --primary: #FFD700; /* Добавил акцентный цвет (желтый, под стройку) */
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.25;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+    }
+
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 10px 15px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .logotip {
+      height: 100px;
+      width: auto;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      transition: background 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .nav-aa {
+      text-decoration: none;
+      color: #333;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      transition: background 0.2s ease;
+      white-space: nowrap;
+      display: none;
+    }
+
+    .nav-a:hover,
+    .nav-aa:hover {
+      background: rgba(0, 0, 0, 0.06);
+    }
+
+    .slogan {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 900;
+      color: #222;
+      white-space: nowrap;
+    }
+
+    /* Бургер */
+    .burger {
+      display: none;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      background: #fff;
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    /* Выпадающее меню на мобилке */
+    .mobile-menu {
+      display: none;
+      border-top: 1px solid #eee;
+      padding: 10px 15px 14px;
+      background: #fff;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 10px 10px;
+      border-radius: 10px;
+      font-weight: 900;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .mobile-menu a:hover {
+      background: rgba(0, 0, 0, 0.06);
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    /* ===== PAGE ===== */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 18px 15px 46px;
+    }
+
+    .name {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 18px;
+      flex-wrap: wrap;
+    }
+
+    .name a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .name .sep {
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .name .current {
+      margin: 0;
+      font-size: 14px;
+      color: rgb(182, 182, 0);
+      font-weight: 900;
+    }
+
+    .nameglav {
+      font-family: "Arial Black", Arial, sans-serif;
+      font-size: clamp(20px, 2.4vw, 30px);
+      color: var(--text);
+      margin: 0 0 16px;
+    }
+
+    .sub {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    /* ===== SEARCH & FILTER CONTROLS (НОВОЕ) ===== */
+    .controls {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .search-input {
+      flex: 1;
+      min-width: 200px;
+      padding: 12px 16px;
+      border: 2px solid #eee;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: #ccc;
+    }
+
+    .sort-select {
+      padding: 12px 16px;
+      border: 2px solid #eee;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      outline: none;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .no-results {
+      text-align: center;
+      padding: 40px;
+      font-weight: bold;
+      color: var(--muted);
+      display: none; /* Скрыто по умолчанию */
+      grid-column: 1 / -1;
+    }
+
+    /* ===== RENT LIST (responsive) ===== */
+    .rent-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .rent-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 14px;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    /* Класс для скрытия элементов при фильтрации */
+    .rent-item.hidden {
+      display: none;
+    }
+
+    .rent-name {
+      font-weight: 900;
+      font-size: 16px;
+      color: var(--text);
+      word-break: break-word;
+    }
+
+    .rent-price {
+      font-weight: 900;
+      font-size: 15px;
+      color: #111;
+      background: var(--card);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      padding: 8px 10px;
+      border-radius: 12px;
+      white-space: nowrap;
+    }
+
+    /* 2 колонки на широких экранах */
+    @media (min-width: 900px) {
+      .rent-list {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* ===== RESPONSIVE NAV ===== */
+    @media (max-width: 900px) {
+      .slogan {
+        display: none;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+
+      .burger {
+        display: inline-block;
+      }
+      
+      .controls {
+        flex-direction: column;
+      }
+      
+      .sort-select {
+        width: 100%;
+      }
+    }
+
+    /* чтобы цена красиво вставала вниз на очень узких экранах */
+    @media (max-width: 360px) {
+      .rent-item {
+        grid-template-columns: 1fr;
+      }
+
+      .rent-price {
+        justify-self: start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="brand">
+        <img src="ЛОГО2.png" class="logotip" alt="Лого" onerror="this.style.display='none'" />
+        <a class="nav-a" href="index.html">Главная</a>
+      </div>
+
+      <p class="slogan">Любой запрос, не вопрос</p>
+
+      <nav class="nav-links" aria-label="Навигация">
+        <a class="nav-aa" href="index.html">Главная</a>
+        <a class="nav-a" href="#kont">Контакты & инфо</a>
+      </nav>
+
+      <button class="burger" type="button" aria-controls="mobileMenu" aria-expanded="false" id="burgerBtn">
+        ☰
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Главная</a>
+      <a href="assortement.html">Наш ассортимент</a>
+      <a href="#kont">Контакты & инфо</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <nav class="name" aria-label="Хлебные крошки">
+      <a href="index.html">Главная</a>
+      <span class="sep">-</span>
+      <a href="assortement.html">Ассортимент</a>
+      <span class="sep">-</span>
+      <p class="current">Прокат инструментов</p>
+    </nav>
+
+    <h1 class="nameglav">Прокат инструментов — услуги аренды</h1>
+    <p class="sub">Цены указаны за 1 сутки аренды.</p>
+
+    <div class="controls">
+      <input type="text" id="searchInput" class="search-input" placeholder="Найти инструмент (например: болгарка)...">
+      <select id="sortSelect" class="sort-select">
+        <option value="default">По умолчанию</option>
+        <option value="asc">Сначала дешевые</option>
+        <option value="desc">Сначала дорогие</option>
+      </select>
+    </div>
+
+    <ul class="rent-list" id="rentList">
+      <li class="rent-item"><span class="rent-name">Бетономешалка</span><span class="rent-price">5 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Тромбовка «кузнечик»</span><span class="rent-price">7 500 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Перфоратор</span><span class="rent-price">3 000 тг / сутки</span></li>
+
+      <li class="rent-item"><span class="rent-name">Отбойный молоток (большой)</span><span class="rent-price">6 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Отбойный молоток (средний)</span><span class="rent-price">4 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Отбойный молоток (маленький)</span><span class="rent-price">3 000 тг / сутки</span></li>
+
+      <li class="rent-item"><span class="rent-name">Леса (1 секция)</span><span class="rent-price">3 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Пчёлка</span><span class="rent-price">2 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Ямобур</span><span class="rent-price">8 000 тг / сутки</span></li>
+
+      <li class="rent-item"><span class="rent-name">Болгарка (125 мм)</span><span class="rent-price">2 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Болгарка (230 мм)</span><span class="rent-price">3 000 тг / сутки</span></li>
+
+      <li class="rent-item"><span class="rent-name">Генератор (большой)</span><span class="rent-price">10 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Генератор (маленький)</span><span class="rent-price">8 000 тг / сутки</span></li>
+
+      <li class="rent-item"><span class="rent-name">Утюг</span><span class="rent-price">1 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Сварочный аппарат</span><span class="rent-price">4 000 тг / сутки</span></li>
+
+      <li class="rent-item"><span class="rent-name">Триммер на батарейках</span><span class="rent-price">3 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Электрошлифмашина</span><span class="rent-price">4 000 тг / сутки</span></li>
+
+      <li class="rent-item"><span class="rent-name">Шуруповёрт</span><span class="rent-price">1 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Шуруповёрт на батарейках</span><span class="rent-price">1 000 тг / сутки</span></li>
+
+      <li class="rent-item"><span class="rent-name">Дизельная пушка (большая)</span><span class="rent-price">10 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Дизельная пушка (маленькая)</span><span class="rent-price">8 000 тг / сутки</span></li>
+
+      <li class="rent-item"><span class="rent-name">Виброплита</span><span class="rent-price">10 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Лазер</span><span class="rent-price">3 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Пылесос</span><span class="rent-price">4 000 тг / сутки</span></li>
+
+      <li class="rent-item"><span class="rent-name">Триммер бензиновый</span><span class="rent-price">5 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Пила бензиновая</span><span class="rent-price">5 000 тг / сутки</span></li>
+
+      <li class="rent-item"><span class="rent-name">Молоток-кувалда</span><span class="rent-price">1 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Молоток простой</span><span class="rent-price">1 000 тг / сутки</span></li>
+
+      <li class="rent-item"><span class="rent-name">Углорез (маленький)</span><span class="rent-price">3 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Углорез (большой)</span><span class="rent-price">8 000 тг / сутки</span></li>
+
+      <li class="rent-item"><span class="rent-name">Штроборез</span><span class="rent-price">4 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Рохля</span><span class="rent-price">8 000 тг / сутки</span></li>
+
+      <li class="rent-item"><span class="rent-name">Ключ-пресс</span><span class="rent-price">5 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Резборез</span><span class="rent-price">4 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Ключ для батарей</span><span class="rent-price">1 000 тг / сутки</span></li>
+
+      <li class="rent-item"><span class="rent-name">Компрессор</span><span class="rent-price">3 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Газовая пушка</span><span class="rent-price">4 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Газовый баллон</span><span class="rent-price">1 000 тг / сутки</span></li>
+
+      <li class="rent-item"><span class="rent-name">Фен электрический</span><span class="rent-price">1 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Обогреватель электрический (маленький)</span><span class="rent-price">2 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Обогреватель электрический (большой)</span><span class="rent-price">3 000 тг / сутки</span></li>
+
+      <li class="rent-item"><span class="rent-name">Ледоруб</span><span class="rent-price">1 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Нивелир</span><span class="rent-price">5 000 тг / сутки</span></li>
+
+      <li class="rent-item"><span class="rent-name">«Жираф» шлифмашинка</span><span class="rent-price">5 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Трубочист</span><span class="rent-price">4 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Миксер</span><span class="rent-price">3 000 тг / сутки</span></li>
+
+      <li class="rent-item"><span class="rent-name">Газовый пистолет с гвоздями</span><span class="rent-price">5 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Фрезер</span><span class="rent-price">3 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Удлинитель</span><span class="rent-price">1 000 тг / сутки</span></li>
+
+      <li class="rent-item"><span class="rent-name">Кафелерезка (большая)</span><span class="rent-price">4 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Кафелерезка (маленькая)</span><span class="rent-price">1 000 тг / сутки</span></li>
+
+      <li class="rent-item"><span class="rent-name">Трансбой-мойка (маленькая)</span><span class="rent-price">3 000 тг / сутки</span></li>
+      <li class="rent-item"><span class="rent-name">Трансбой-мойка (большая)</span><span class="rent-price">10 000 тг / сутки</span></li>
+      
+      <li id="noResults" class="no-results">По вашему запросу ничего не найдено 😔</li>
+    </ul>
+
+    <div id="kont" style="margin-top:24px;"></div>
+  </main>
+
+  <script>
+    // ===== ЛОГИКА МЕНЮ =====
+    const btn = document.getElementById('burgerBtn');
+    const menu = document.getElementById('mobileMenu');
+
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+
+    menu.addEventListener('click', (e) => {
+      if (e.target.tagName.toLowerCase() === 'a') {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // ===== ЛОГИКА ПОИСКА И СОРТИРОВКИ =====
+    const searchInput = document.getElementById('searchInput');
+    const sortSelect = document.getElementById('sortSelect');
+    const rentList = document.getElementById('rentList');
+    // Собираем все элементы, кроме сообщения "Ничего не найдено"
+    const items = Array.from(rentList.querySelectorAll('.rent-item'));
+    const noResults = document.getElementById('noResults');
+
+    // Функция получения цены из текста (удаляем "тг", "сутки" и пробелы)
+    function getPrice(item) {
+      const priceText = item.querySelector('.rent-price').innerText;
+      return parseInt(priceText.replace(/\D/g, '')) || 0;
+    }
+
+    function filterAndSort() {
+      const query = searchInput.value.toLowerCase().trim();
+      const sortValue = sortSelect.value;
+      let visibleCount = 0;
+
+      // 1. ФИЛЬТРАЦИЯ
+      const filteredItems = items.filter(item => {
+        const name = item.querySelector('.rent-name').innerText.toLowerCase();
+        const isVisible = name.includes(query);
+        
+        if (isVisible) {
+          item.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          item.classList.add('hidden');
+        }
+        return isVisible;
+      });
+
+      // Показываем/скрываем сообщение "Ничего не найдено"
+      noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+
+      // 2. СОРТИРОВКА (только видимых элементов)
+      if (sortValue !== 'default') {
+        filteredItems.sort((a, b) => {
+          const priceA = getPrice(a);
+          const priceB = getPrice(b);
+          return sortValue === 'asc' ? priceA - priceB : priceB - priceA;
+        });
+        
+        // Переставляем отсортированные элементы в DOM
+        filteredItems.forEach(item => rentList.appendChild(item));
+        
+        // Перемещаем "нет результатов" в конец списка на всякий случай
+        rentList.appendChild(noResults);
+      } else {
+        // Если выбрано "По умолчанию", можно вернуть порядок, 
+        // но проще оставить как отфильтровалось, так как исходный порядок 
+        // сложно восстановить без ID.
+        // Для простоты при поиске порядок не меняется.
+      }
+    }
+
+    // Слушаем события
+    searchInput.addEventListener('input', filterAndSort);
+    sortSelect.addEventListener('change', filterAndSort);
+
+  </script>
+</body>
+
+</html>
