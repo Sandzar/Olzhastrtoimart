@@ -1065,215 +1065,110 @@
             background-color: #717171;
         }
 
-        .Catolog1{
-            background-color: #dddddd;
-            height: 180px;
-            width: 180px;
-            border-radius: 20px;
-            background-image: url("Сантехника.png");
-            background-size: 130%;
-            background-position: -25px 35px;
-            background-repeat: no-repeat;
-            margin-top: 15px;
-            margin-left: 35px;
+        /* == Индивидуальные стили для картинок == */
+        .c1 { background: #ddd url("Сантехника.png") no-repeat -40px 30px/ 140%; }
+        .c2 { background: #ddd url("краски и лаки.png") no-repeat center center / 80%; }
+        .c3 { background: #ddd url("Электро.png") no-repeat -10px -20px / 100%; }
+        .c4 { background: #ddd url("клеи.png") no-repeat center center / 70%; }
+        .c5 { background: #ddd url("Сухие смеси.png") no-repeat 20px 55px / 80%; }
+        .c6 { background: #ddd url("Инструменты и ручные.png") no-repeat center center / 80%; }
+        /* У c7 убрал border: none, так как это теперь ссылка, а не кнопка */
+        .c7 { background: #ddd url("Еврокубы.png") no-repeat 20px 45px / 80%; }
+        .c8 { background: #ddd url("отопление.png") no-repeat center center / 90%; }
+        .c9 { background: #ddd url("Прокат Инструмент.png") no-repeat -10px 45px / 100%; }
+        .c10 { background: #ddd url("Крепежи.png") no-repeat 55px 65px / 100%; }
+        .c11 { background: #ddd url("Гипсокартон.png") no-repeat 70px 30px / 100%; }
+        .c12 { background: #ddd url("Водононагреватель.png") no-repeat 0px 45px / 90%; }
+        .c13 { background: #ddd url("Все для дома.png") no-repeat 20px 20px / 75%; }
+        .c14 { background: #ddd url("Автоаксессуары.png") no-repeat 30px 5px / 120%; }
+        .c15 { background: #ddd url("Водо.png") no-repeat center center / 90%; }
+        .c16 { background: #ddd url("Вентиляция.png") no-repeat center center/ 80%; }
+        .c17 { background: #ddd url("Инвент.png") no-repeat center center/ 90%; }
+        .vmeste{
+            display: flex;
         }
-        .Catolog1 h3{
-            font-weight: bold;
-            padding-top: 15px;
-            padding-left: 15px;
-        }
-        .Catolog2{
-            background-color: #dddddd;
-            height: 180px;
-            width: 180px;
-            border-radius: 20px;
-            background-image: url("краски и лаки.png");
-            background-size: 80%;
-            background-position: center center;
-            background-repeat: no-repeat;
-            margin-top: 15px;
-            margin-left: 35px;
-        }
-        .Catolog2 h3{
-            font-weight: bold;
-            padding-top: 15px;
-            padding-left: 15px;
+        /* == Сетка каталога (АДАПТИВНОСТЬ ТУТ) == */
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+            gap: 20px;
+            width: 90%;
+            margin-left: 65px;
+            margin-top: 40px;
         }
 
-        .Catolog3{
+        /* == Общий стиль карточки (Теперь это ссылка) == */
+        .card {
             background-color: #dddddd;
-            height: 180px;
-            width: 180px;
             border-radius: 20px;
-            background-image: url("Электро.png");
-            background-size: 100%;
-            background-position: -10px -25px;
-            background-repeat: no-repeat;
-            margin-top: 55px;
-            margin-left: 15px;
-        }
-        .Catolog3 h3{
-            font-weight: bold;
-            padding-top: 15px;
-            padding-left: 15px;
-        }
-        .Catolog4{
-            background-color: #dddddd;
-            height: 180px;
-            width: 180px;
-            border-radius: 20px;
-            background-image: url("клеи.png");
-            background-size: 60%;
-            background-position: center center;
-            background-repeat: no-repeat;
-            margin-top: 15px;
-            margin-left: 15px;
-        }
-        .Catolog4 h3{
-            font-weight: bold;
-            padding-top: 15px;
-            padding-left: 15px;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            
+            /* Новые стили для тега <a> чтобы он выглядел как блок */
+            display: block;           /* Важно: ссылка ведет себя как блок */
+            text-decoration: none;    /* Убираем подчеркивание */
+            color: inherit;           /* Убираем синий цвет ссылки */
+            cursor: pointer;
         }
 
-
-        .Catolog5{
-            background-color: #dddddd;
-            height: 180px;
-            width: 180px;
-            border-radius: 20px;
-            background-image: url("Сухие\ смеси.png");
-            background-size: 80%;
-            background-position: 15px 55px;
-            background-repeat: no-repeat;
-            margin-top: 15px;
-            margin-left: 18px;
-        }
-        .Catolog5 h3{
-            font-weight: bold;
-            padding-top: 15px;
-            padding-left: 15px;
-        }
-        .Catolog6{
-            background-color: #dddddd;
-            height: 180px;
-            width: 180px;
-            border-radius: 20px;
-            background-image: url("Инструменты\ и\ ручные.png");
-            background-size: 80%;
-            background-position: center center;
-            background-repeat: no-repeat;
-            margin-top: 15px;
-            margin-left: 18px;
-        }
-        .Catolog6 h3{
-            font-weight: bold;
-            padding-top: 15px;
-            padding-left: 15px;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         }
 
-        .Catolog7{
-            background-color: #dddddd;
-            height: 180px;
-            width: 180px;
-            border-radius: 20px;
-            background-image: url("Еврокубы.png");
-            background-size: 75%;
-            background-position: center 40px;
-            background-repeat: no-repeat;
-            margin-top: 55px;
-            margin-left: 15px;
-        }
-        .Catolog7 h3{
+        .card h3 {
             font-weight: bold;
-            padding-top: 15px;
-            padding-left: 15px;
-        }
-        .Catolog8{
-            background-color: #dddddd;
-            height: 180px;
-            width: 180px;
-            border-radius: 20px;
-            background-image: url("отпление\ и.png");
-            background-size: 75%;
-            background-position: center 30px;
-            background-repeat: no-repeat;
-            margin-top: 15px;
-            margin-left: 15px;
-        }
-        .Catolog8 h3{
-            font-weight: bold;
-            padding-top: 15px;
-            padding-left: 15px;
+            font-size: 18px;
+            padding: 15px;
+            margin: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-sizing: border-box;
+            color: #222; /* Явно задаем цвет текста, чтобы не был синим */
         }
 
-        .Catolog9{
-            background-color: #dddddd;
-            height: 180px;
-            width: 180px;
-            border-radius: 20px;
-            background-image: url("Прокат\ Инструмент.png");
-            background-size: 100%;
-            background-position: -10px 45px;
-            background-repeat: no-repeat;
-            margin-top: 15px;
-            margin-left: 18px;
-        }
-        .Catolog9 h3{
-            font-weight: bold;
-            padding-top: 15px;
-            padding-left: 15px;
-        }
-        .Catolog10{
-            background-color: #dddddd;
-            height: 180px;
-            width: 180px;
-            border-radius: 20px;
-            background-image: url("Крепежи.png");
-            background-size: 100%;
-            background-position: 55px 65px;
-            background-repeat: no-repeat;
-            margin-top: 15px;
-            margin-left: 18px;
-        }
-        .Catolog10 h3{
-            font-weight: bold;
-            padding-top: 15px;
-            padding-left: 15px;
+        .name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 0 18px;
+            flex-wrap: wrap;
         }
 
-        .Catolog11{
-            background-color: #dddddd;
-            height: 180px;
-            width: 180px;
-            border-radius: 20px;
-            background-image: url("Гипсокартон.png");
-            background-size: 100%;
-            background-position: 70px 50px;
-            background-repeat: no-repeat;
-            margin-top: 55px;
-            margin-left: 15px;
+        .name a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 800;
+            font-size: 14px;
         }
-        .Catolog11 h3{
-            font-weight: bold;
-            padding-top: 15px;
-            padding-left: 15px;
+
+        .name .sep {
+            font-size: 14px;
+            color: #666;
+            font-weight: 800;
         }
-        .Catolog12{
-            background-color: #dddddd;
-            height: 180px;
-            width: 180px;
-            border-radius: 20px;
-            background-image: url("Водононагреватель.png");
-            background-size: 90%;
-            background-position: 10px 40px;
-            background-repeat: no-repeat;
-            margin-top: 15px;
-            margin-left: 15px;
+
+        .name .current {
+            margin: 0;
+            font-size: 14px;
+            color: rgb(182, 182, 0);
+            font-weight: 900;
         }
-        .Catolog12 h3{
-            font-weight: bold;
-            padding-top: 15px;
-            padding-left: 15px;
+
+        .nameglav {
+            font-family: "Arial Black", Arial, sans-serif;
+            font-size: clamp(20px, 2.4vw, 28px);
+            color: #222;
+            margin: 0 0 18px;
+        }
+
+        .name a:hover {
+            color: rgb(182, 182, 0);
         }
         .vmeste{
             display: flex;
@@ -1682,6 +1577,45 @@
   }
 
 }
+/* == Адаптив для телефонов (экраны меньше 480px) == */
+        @media (max-width: 480px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .catalog-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+                margin-left: 20px
+            }
+
+            .card h3 {
+                font-size: 16px;
+                padding: 10px;
+            }
+
+            .c13 { background-position: 40px 20px / 75%; }
+            .c15 { background-position: center center / 80%; }
+        }
+
+        /* ===== RESPONSIVE NAV ===== */
+        @media (max-width: 900px) {
+            .slogan { display: none; }
+        }
+
+        @media (max-width: 720px) {
+            .nav-links { display: none; }
+            .burger { display: inline-block; }
+            .nav-inner { height: 64px; }
+            .brand a { display: none; }
+            .rabota, .nomer, .adress {
+                width: 90%;
+                margin: 15px auto;
+            }
+        }
+
 
 
 
