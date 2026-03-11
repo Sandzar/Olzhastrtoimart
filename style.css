@@ -1159,6 +1159,9 @@
             color: rgb(182, 182, 0);
             font-weight: 900;
         }
+        .glav-body{
+            overflow-x: hidden;
+        }
 
         .nameglav {
             font-family: "Arial Black", Arial, sans-serif;
@@ -1615,6 +1618,7 @@
                 margin: 15px auto;
             }
         }
+
 
 
 
