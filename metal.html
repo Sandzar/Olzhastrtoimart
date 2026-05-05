@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Купить металлопрокат в Астане и Косшы: трубы, арматура, уголки, катанка, лист — Олжа</title>
+
+  <meta name="description"
+    content="Купить металлопрокат в Астане и Косшы. Продажа профильных и круглых труб, арматуры, уголков, катанки и металлических листов. Низкие цены, склад в Косшы, работаем с Астаной." />
+  <meta name="keywords" content="металлопрокат, купить трубы астана, арматура косшы, уголок металлический, катанка цена, лист металлический" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://olzhastroymarket.kz/metal.html" />
+
+  <meta property="og:title" content="Металлопрокат в Астане и Косшы — магазин Олжа" />
+  <meta property="og:description" content="Трубы, арматура, уголки, катанка, металлический лист. Самовывоз и доставка." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      background: #fff;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+    }
+
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 10px 15px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .logotip {
+      height: 100px;
+      width: auto;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      transition: background 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .nav-aa {
+      text-decoration: none;
+      color: #333;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      transition: background 0.2s ease;
+      white-space: nowrap;
+      display: none;
+    }
+
+    .nav-a:hover,
+    .nav-aa:hover {
+      background: rgba(0, 0, 0, 0.06);
+    }
+
+    .slogan {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 900;
+      color: #222;
+      white-space: nowrap;
+    }
+
+    /* Бургер */
+    .burger {
+      display: none;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      background: #fff;
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    /* Выпадающее меню на мобилке */
+    .mobile-menu {
+      display: none;
+      border-top: 1px solid #eee;
+      padding: 10px 15px 14px;
+      background: #fff;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 10px 10px;
+      border-radius: 10px;
+      font-weight: 900;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .mobile-menu a:hover {
+      background: rgba(0, 0, 0, 0.06);
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    /* ===== LAYOUT ===== */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 18px 15px 40px;
+    }
+
+    .name {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 18px;
+      flex-wrap: wrap;
+    }
+
+    .name a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .name .sep {
+      font-size: 14px;
+      color: #666;
+      font-weight: 800;
+    }
+
+    .name .current {
+      margin: 0;
+      font-size: 14px;
+      color: rgb(182, 182, 0);
+      font-weight: 900;
+    }
+
+    .nameglav {
+      font-family: "Arial Black", Arial, sans-serif;
+      font-size: clamp(20px, 2.4vw, 28px);
+      color: #222;
+      margin: 0 0 18px;
+    }
+
+    /* ===== GRID ===== */
+    .vmeste_vse {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 15px;
+      margin: 0 0 20px;
+    }
+
+    .card {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      background: #fff;
+      box-shadow: 0 8px 5px rgba(0, 0, 0, 0.10);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .name a:hover {
+      color: rgb(182, 182, 0);
+    }
+
+    .photo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .photo img {
+      width: 100%;
+      height: clamp(180px, 28vw, 325px);
+      object-fit: contain;
+      display: block;
+      background: #fff;
+    }
+
+    .description h2 {
+      font-family: "Arial Black", Arial, sans-serif;
+      font-size: 18px;
+      color: #333;
+      margin: 14px 0 10px;
+    }
+
+    .description p {
+      font-size: 14px;
+      color: #414141;
+      margin: 0 0 12px;
+      line-height: 1.35;
+    }
+
+    .vmeste {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .otdel{
+      margin: 0;
+      border: 2px solid #888;
+      border-radius: 20px;
+      padding: 5px 10px;
+      font-size: 13px;
+      color: #333;
+    }
+
+    .chena {
+      margin: 0;
+      border: 2px solid #888;
+      border-radius: 10px;
+      padding: 5px 10px;
+      font-size: 13px;
+      color: #333333;
+      background-color: rgb(119, 218, 119);
+    }
+
+    .section {
+      margin-top: 30px;
+      padding-top: 12px;
+      border-top: 1px solid #eee;
+    }
+
+    .section h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .section p {
+      margin: 0;
+      font-size: 14px;
+      color: #444;
+      line-height: 1.4;
+    }
+
+    .magaz {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .rabota,
+    .nomer,
+    .adress {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      border-radius: 40px;
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 600px;
+      background-color: white;
+      text-align: center;
+    }
+
+    .rabota h2 {
+      margin-top: 35px;
+    }
+
+    .rabota h2,
+    .nomer h2,
+    .adress h2 {
+      margin: 0px;
+    }
+
+    .ssilka {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .gis,
+    .googlemap,
+    .yandex,
+    .WhatsApp,
+    .instagram {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      margin: 0 5px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .footer {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      font-size: 18px;
+      line-height: 1.6;
+      font-weight: bold;
+      margin-top: 50px;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      width: 100%;
+    }
+
+    .footer p {
+      margin: 5px 0;
+    }
+
+    .xxxx {
+      text-align: center;
+      margin-top: 0px;
+      font-size: 14px;
+      color: #636363;
+      margin-bottom: 0px;
+      background-color: #c9c9c9;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    .btnSS {
+      background-color: #FFD300;
+      color: rgb(63, 63, 63);
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .vipP {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .gis {
+      background-image: url("2 гис.jpg");
+    }
+
+    .googlemap {
+      background-image: url("гугл карта.png");
+      background-size: 170%;
+    }
+
+    .yandex {
+      background-image: url("Яндекс карта.png");
+    }
+
+    .WhatsApp {
+      background-image: url("Ватсап.jpg");
+      background-size: 170%;
+    }
+
+    .instagram {
+      background-image: url("инстаграм.jpeg");
+      background-size: 130%;
+    }
+
+    /* ===== RESPONSIVE NAV ===== */
+    @media (max-width: 900px) {
+      .slogan {
+        display: none;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+
+      .burger {
+        display: inline-block;
+      }
+
+      .nav-inner {
+        height: 64px;
+      }
+
+      .brand a {
+        display: none;
+      }
+
+      .rabota,
+      .nomer,
+      .adress {
+        width: 90%;
+        margin: 15px auto;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Строительный магазин Олжа",
+    "description": "Продажа металлопроката в Астане и Косшы.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "KZ",
+      "addressLocality": "Косшы"
+    },
+    "areaServed": ["Косшы", "Астана", "Акмолинская область"],
+    "url": "https://olzhastroymarket.kz/"
+  }
+  </script>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="brand">
+        <img src="ЛОГО2.png" class="logotip" alt="Строительный магазин Олжа — логотип" />
+        <a class="nav-a" href="index.html">Главная</a>
+      </div>
+
+      <p class="slogan">Любой запрос, не вопрос</p>
+
+      <nav class="nav-links" aria-label="Навигация">
+        <a class="nav-aa" href="index.html">Главная</a>
+        <a class="nav-a" href="#kont">Контакты & инфо</a>
+      </nav>
+
+      <button class="burger" type="button" aria-controls="mobileMenu" aria-expanded="false" id="burgerBtn">
+        ☰
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Главная</a>
+      <a href="assortement.html">Наш ассортимент</a>
+      <a href="#kont">Контакты & инфо</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <nav class="name" aria-label="Хлебные крошки">
+      <a href="index.html">Главная</a>
+      <span class="sep">-</span>
+      <a href="assortement.html">Ассортимент</a>
+      <span class="sep">-</span>
+      <p class="current">Металлы</p>
+    </nav>
+
+    <h1 class="nameglav">Металлы</h1>
+    <h2>Трубы проф. и метал.</h2>
+    <section class="vmeste_vse" aria-label="Ассортимент">
+      <!-- Товары из image_0.png -->
+      <!-- Профильные трубы -->
+      <article class="card">
+        <div class="photo">
+          <img src="Проф.png" alt="Труба профильная 40x20x1.5 мм купить" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Труба профильная 40x20x1.5</h2>
+          <p>Прямоугольного сечения, металлическая. Цена указана за 1 погонный метр.</p>
+        </div>
+        <div class="vmeste">
+          <p class="otdel">40x20x1.5 мм</p>
+          <p class="otdel">Металл</p>
+          <p class="chena">800 тг/п.м.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo">
+          <img src="Проф.png" alt="Труба профильная 40x40x2.8 мм купить" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Труба профильная 40x40x2.8</h2>
+          <p>Квадратного сечения, металлическая. Цена указана за 1 погонный метр.</p>
+        </div>
+        <div class="vmeste">
+          <p class="otdel">40x40x2.8 мм</p>
+          <p class="otdel">Металл</p>
+          <p class="chena">1800 тг/п.м.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo">
+          <img src="Проф.png" alt="Труба профильная 60x60x1.5 мм купить" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Труба профильная 60x60x1.5</h2>
+          <p>Квадратного сечения, металлическая. Цена указана за 1 погонный метр.</p>
+        </div>
+        <div class="vmeste">
+          <p class="otdel">60x60x1.5 мм</p>
+          <p class="otdel">Металл</p>
+          <p class="chena">2000 тг/п.м.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo">
+          <img src="Проф.png" alt="Труба профильная 80x80x3 мм купить" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Труба профильная 80x80x3</h2>
+          <p>Квадратного сечения, металлическая. Цена указана за 1 погонный метр.</p>
+        </div>
+        <div class="vmeste">
+          <p class="otdel">80x80x3 мм</p>
+          <p class="otdel">Металл</p>
+          <p class="chena">3300 тг/п.м.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo">
+          <img src="Проф.png" alt="Труба профильная 100x100x3 мм купить" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Труба профильная 100x100x3</h2>
+          <p>Квадратного сечения, металлическая. Цена указана за 1 погонный метр.</p>
+        </div>
+        <div class="vmeste">
+          <p class="otdel">100x100x3 мм</p>
+          <p class="otdel">Металл</p>
+          <p class="chena">4200 тг/п.м.</p>
+        </div>
+      </article>
+
+      <!-- Круглые трубы -->
+      <article class="card">
+        <div class="photo">
+          <img src="труба.png" alt="Труба металлическая d 15 мм купить" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Труба металлическая d 15</h2>
+          <p>Круглого сечения, водогазопроводная. Цена указана за 1 погонный метр.</p>
+        </div>
+        <div class="vmeste">
+          <p class="otdel">d 15 мм</p>
+          <p class="otdel">Металл</p>
+          <p class="chena">650 тг/п.м.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo">
+          <img src="труба.png" alt="Труба металлическая d 20 мм купить" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Труба металлическая d 20</h2>
+          <p>Круглого сечения, металлическая. Цена указана за 1 погонный метр.</p>
+        </div>
+        <div class="vmeste">
+          <p class="otdel" >d 20 мм</p>
+          <p class="otdel">Металл</p>
+          <p class="chena">800 тг/п.м.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo">
+          <img src="труба.png" alt="Труба металлическая d 25 мм купить" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Труба металлическая d 25</h2>
+          <p>Круглого сечения, металлическая. Цена указана за 1 погонный метр.</p>
+        </div>
+        <div class="vmeste">
+          <p class="otdel">d 25 мм</p>
+          <p class="otdel">Металл</p>
+          <p class="chena">1000 тг/п.м.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo">
+          <img src="труба.png" alt="Труба металлическая d 32 мм купить" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Труба металлическая d 32</h2>
+          <p>Круглого сечения, металлическая. Цена указана за 1 погонный метр.</p>
+        </div>
+        <div class="vmeste">
+          <p class="otdel">d 32 мм</p>
+          <p class="otdel">Металл</p>
+          <p class="chena">1300 тг/п.м.</p>
+        </div>
+      </article>
+    </section>
+    <h2>Арматуры</h2>
+    <section class="vmeste_vse" aria-label="Ассортимент">
+      
+      <!-- Товары из image_1.png -->
+      <!-- Арматура -->
+      <article class="card">
+        <div class="photo">
+          <img src="Арматура.png" alt="Арматура Ø 12 мм рифленая строительная" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Арматура Ø 12</h2>
+          <p>Строительная рифленая арматура для фундамента. Цена указана за 1 погонный метр.</p>
+        </div>
+        <div class="vmeste">
+          <p class="otdel">Ø 12 мм</p>
+          <p class="otdel">Сталь</p>
+          <p class="chena">350 тг/п.м.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo">
+          <img src="Арматура.png" alt="Арматура Ø 14 мм рифленая строительная" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Арматура Ø 14</h2>
+          <p>Строительная рифленая арматура для фундамента. Цена указана за 1 погонный метр.</p>
+        </div>
+        <div class="vmeste">
+          <p class="otdel">Ø 14 мм</p>
+          <p class="otdel">Сталь</p>
+          <p class="chena">450 тг/п.м.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo">
+          <img src="Арматура.png" alt="Арматура Ø 16 мм рифленая строительная" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Арматура Ø 16</h2>
+          <p>Строительная рифленая арматура для фундамента. Цена указана за 1 погонный метр.</p>
+        </div>
+        <div class="vmeste">
+          <p class="otdel">Ø 16 мм</p>
+          <p class="otdel">Сталь</p>
+          <p class="chena">550 тг/п.м.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo">
+          <img src="Арматура.png" alt="Арматура Ø 18 мм рифленая строительная" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Арматура Ø 18</h2>
+          <p>Строительная рифленая арматура для фундамента. Цена указана за 1 погонный метр.</p>
+        </div>
+        <div class="vmeste">
+          <p class="otdel">Ø 18 мм</p>
+          <p class="otdel">Сталь</p>
+          <p class="chena">690 тг/п.м.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo">
+          <img src="Арматура.png" alt="Арматура Ø 22 мм рифленая строительная" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Арматура Ø 22</h2>
+          <p>Строительная рифленая арматура для фундамента. Цена указана за 1 погонный метр.</p>
+        </div>
+        <div class="vmeste">
+          <p class="otdel">Ø 22 мм</p>
+          <p class="otdel">Сталь</p>
+          <p class="chena">900 тг/п.м.</p>
+        </div>
+      </article>
+    </section>
+    <h2>Угольники</h2>
+    <section class="vmeste_vse" aria-label="Ассортимент">
+
+      <!-- Угольник -->
+      <article class="card">
+        <div class="photo">
+          <img src="угл.png" alt="Угольник металлический L-образный 50x50x4" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Угольник L 50x50x4</h2>
+          <p>Металлический L-образный профиль. Цена указана за 1 погонный метр.</p>
+        </div>
+        <div class="vmeste">
+          <p class="otdel">50x50x4 мм</p>
+          <p class="otdel">Металл</p>
+          <p class="chena">1500 тг/п.м.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo">
+          <img src="угл.png" alt="Угольник металлический L-образный 75x75x5" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Угольник L 75x75x5</h2>
+          <p>Металлический L-образный профиль. Цена указана за 1 погонный метр.</p>
+        </div>
+        <div class="vmeste">
+          <p class="otdel">75x75x5 мм</p>
+          <p class="otdel">Металл</p>
+          <p class="chena">3200 тг/п.м.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo">
+          <img src="угл.png" alt="Угольник металлический L-образный 100x100" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Угольник L 100x100</h2>
+          <p>Металлический L-образный профиль. Цена указана за 1 погонный метр.</p>
+        </div>
+        <div class="vmeste">
+          <p class="otdel">100x100 мм</p>
+          <p class="otdel">Металл</p>
+          <p class="chena">4500 тг/п.м.</p>
+        </div>
+      </article>
+    </section>
+    <h2>Катанки</h2>
+    <section class="vmeste_vse" aria-label="Ассортимент">
+
+      <!-- Товары из image_2.png -->
+      <!-- Катанка -->
+      <article class="card">
+        <div class="photo">
+          <img src="Катынка.png" alt="Катанка 6 мм стальная проволока" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Катанка 6</h2>
+          <p>Стальная проволока круглого сечения. Цена указана за 1 погонный метр.</p>
+        </div>
+        <div class="vmeste">
+          <p class="otdel" >6 мм</p>
+          <p class="otdel">Сталь</p>
+          <p class="chena">120 тг/п.м.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo">
+          <img src="Катынка.png" alt="Катанка 8 мм стальная проволока" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Катанка 8</h2>
+          <p>Стальная проволока круглого сечения. Цена указана за 1 погонный метр.</p>
+        </div>
+        <div class="vmeste">
+          <p class="otdel">8 мм</p>
+          <p class="otdel">Сталь</p>
+          <p class="chena" >170 тг/п.м.</p>
+        </div>
+      </article>
+    </section>
+    <h2>Листы</h2>
+    <section class="vmeste_vse" aria-label="Ассортимент">
+
+      <!-- Лист -->
+      <article class="card">
+        <div class="photo">
+          <img src="лист.png" alt="Металлический лист 1x2000x2" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Лист 1x2000x2</h2>
+          <p>Металлический лист горячекатаный. Цена указана за т.л (тонна-лист или за лист, уточнять).</p>
+        </div>
+        <div class="vmeste">
+          <p class="otdel">1x2000x2 мм</p>
+          <p class="otdel">Металл</p>
+          <p class="chena"  >18000 тг/т.л</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo">
+          <img src="лист.png" alt="Металлический лист 1x2000x3" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Лист 1x2000x3</h2>
+          <p>Металлический лист горячекатаный. Цена указана за т.л (тонна-лист или за лист, уточнять).</p>
+        </div>
+        <div class="vmeste">
+          <p class="otdel">1x2000x3 мм</p>
+          <p class="otdel">Металл</p>
+          <p class="chena">20000 тг/т.л</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" aria-label="Где купить">
+      <h3>Где купить металлопрокат в Астане и Косшы?</h3>
+      <p>
+        Строительный магазин «Олжа» предлагает широкий выбор металлопроката. Если вы ищете, где <strong>купить трубы, арматуру, уголки, катанку или металлический лист в Астане</strong> или Косшы, вы попали по адресу. Наш склад находится в Косшы, но мы активно работаем с клиентами из столицы.
+        <br><br>
+        У нас всегда в наличии:
+        <br>— <strong>Профильные и круглые трубы</strong> различных сечений.
+        <br>— <strong>Арматура строительная</strong> рифленая и гладкая.
+        <br>— <strong>Уголки металлические</strong>, катанка, металлические листы.
+      </p>
+    </section>
+
+    <section id="kont" class="section" aria-label="Контакты и информация">
+      <h3>Контакты & инфо</h3>
+      <div class="vmeste">
+        <div class="rabota">
+          <h2>График работы<br>9:00-21:00<br>Без обеда и выходных </h2>
+        </div>
+
+        <div class="adress">
+          <h2>Наш адрес:</h2>
+          <h2>Ул. Кобыланды батыр 81, Косшы</h2>
+          <div class="ssilka">
+            <button class="gis"
+              onclick="press(this);window.location.href=`https://2gis.kz/astana/geo/70000001081896930`"></button>
+            <button class="googlemap"
+              onclick="press(this);window.location.href=`https://www.google.com/maps/place/Строительный+магазин+Олжа`"></button>
+            <button class="yandex"
+              onclick="press(this);window.location.href=`https://yandex.kz/maps/-/CLvNZNkk`"></button>
+          </div>
+
+        </div>
+        <div class="nomer">
+          <h2>Наш номер телефон:</h2>
+          <h2>+7 775 447 9913</h2>
+          <button class="WhatsApp" onclick="press(this);window.location.href=`https://wa.me/77754479913`"></button>
+          <button class="instagram"
+            onclick="press(this);window.location.href=`https://www.instagram.com/olzha.stroymart`"></button>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+  <div class="footer">
+      <p class="vipP">Нашел ошибку(-и) сайта?</p>
+      <p>Напиши нам:</p>
+      <button
+        onclick="window.location.href='https://wa.me/77762857679?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%8F%20%D0%BF%D0%BE%20%D0%BE%D0%B1%D1%8A%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8E'"
+        class="btnSS">WhatsApp</button>
+
+      <button onclick="window.location.href='https://t.me/vebrazrab2011'" class="btnSS">Telegram</button>
+    </div>
+    <p class="xxxx">© 2025 Строительный магазин "Олжа". Все права защищены.</p>
+    </div>
+
+  <script>
+    const btn = document.getElementById('burgerBtn');
+    const menu = document.getElementById('mobileMenu');
+
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+
+    // Закрывать меню при клике по ссылке
+    menu.addEventListener('click', (e) => {
+      if (e.target.tagName.toLowerCase() === 'a') {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    function press(element) {
+        // Функция-заглушка, если она нужна для анимации нажатия, можно добавить сюда
+    }
+  </script>
+</body>
+
+</html>
